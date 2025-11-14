@@ -4,182 +4,367 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>E-Portfolio – Francesco</title>
+
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-  <script src="https://kit.fontawesome.com/a2e0b5a56c.js" crossorigin="anonymous"></script>
+
+  <!-- Font Awesome (defer to avoid blocking) -->
+  <script defer src="https://kit.fontawesome.com/a2e0b5a56c.js" crossorigin="anonymous"></script>
+
   <style>
+    :root{
+      --bg: #0b0b0d;
+      --card: rgba(255,255,255,0.04);
+      --muted: #bfbfbf;
+      --text: #e8e8e8;
+      --accent: #1e90ff;
+      --accent-soft: #7bb5ff;
+      --glass: rgba(0,0,0,0.35);
+      --max-width: 1100px;
+      --radius: 18px;
+    }
+
+    /* Reset & sensible defaults */
+    *,*::before,*::after{box-sizing:border-box}
+    html,body{height:100%}
     body {
       margin: 0;
-      font-family: 'Poppins', sans-serif;
-      background: #0b0b0d;
-      color: #e8e8e8;
+      font-family: 'Poppins', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      background: var(--bg);
+      color: var(--text);
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      line-height:1.5;
       overflow-x: hidden;
+      padding-top: 72px; /* space for fixed nav */
+    }
+
+    a { color: inherit; text-decoration: none; }
+    a:focus { outline: 3px solid color-mix(in srgb, var(--accent) 50%, transparent); outline-offset: 4px; border-radius:6px; }
+
+    /* Skip link for keyboard users */
+    .skip-link{
+      position: absolute;
+      left: -9999px;
+      top: auto;
+      width: 1px;
+      height: 1px;
+      overflow: hidden;
+    }
+    .skip-link:focus{
+      left: 12px;
+      top: 12px;
+      width: auto;
+      height: auto;
+      padding: 8px 12px;
+      background: #fff;
+      color: #000;
+      border-radius: 6px;
+      z-index: 9999;
     }
 
     /* NAVBAR */
     nav {
       width: 100%;
-      padding: 18px 40px;
+      padding: 12px 20px;
       position: fixed;
       top: 0;
+      left: 0;
       backdrop-filter: blur(10px);
-      background: rgba(0, 0, 0, 0.35);
-      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-      z-index: 99;
+      background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(0,0,0,0.35));
+      border-bottom: 1px solid rgba(255,255,255,0.04);
+      z-index: 999;
       display: flex;
-      justify-content: center;
       align-items: center;
+      justify-content: center;
     }
-    nav a {
+
+    nav .nav-inner{
+      width: 100%;
+      max-width: var(--max-width);
+      display:flex;
+      align-items:center;
+      gap:16px;
+      justify-content:space-between;
+    }
+
+    .brand{
+      display:flex;
+      gap:12px;
+      align-items:center;
+      flex: 0 0 auto;
+    }
+    .brand .brand-name{
+      font-weight:600;
+      color:var(--text);
+      font-size: 0.95rem;
+    }
+
+    /* menu */
+    .nav-menu{
+      display:flex;
+      align-items:center;
+      gap:16px;
+    }
+    .nav-menu a{
       color: #dcdcdc;
-      text-decoration: none;
-      margin-left: 20px;
-      transition: 0.3s;
+      padding: 8px 10px;
+      border-radius: 8px;
+      transition: 0.18s;
+      font-size: 0.95rem;
     }
-    nav a:hover {
-      color: #7bb5ff;
+    .nav-menu a:hover{
+      color: var(--accent-soft);
+      background: rgba(255,255,255,0.02);
+    }
+
+    /* hamburger */
+    .nav-toggle{
+      display:none;
+      background:transparent;
+      border:0;
+      color:var(--text);
+      padding:8px;
+      border-radius:8px;
+      cursor:pointer;
     }
 
     /* HEADER */
-    header {
-      padding: 140px 20px 80px;
+    header{
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 56px 20px 36px;
       text-align: center;
     }
-    header img {
-      width: 140px;
-      height: 140px;
-      border-radius: 50%;
-      object-fit: cover;
-      border: 3px solid #1e90ff;
-      box-shadow: 0 0 25px rgba(30, 144, 255, 0.4);
+    header .avatar{
+      width: clamp(88px, 22vmin, 140px);
+      height: clamp(88px, 22vmin, 140px);
+      border-radius:50%;
+      object-fit:cover;
+      border: 3px solid var(--accent);
+      box-shadow: 0 0 25px rgba(30,144,255,0.25);
       animation: fadeIn 1.3s ease;
+      display:inline-block;
     }
-    header h1 {
-      margin-top: 25px;
-      font-size: 3rem;
-      font-weight: 600;
-      color: #f2f2f2;
+    header h1{
+      margin-top:18px;
+      font-size: clamp(1.6rem, 3.6vw, 3rem);
+      font-weight:600;
+      color:var(--text);
       animation: fadeUp 1.5s ease;
     }
-    header p {
-      font-size: 1.2rem;
-      color: #bfbfbf;
-      margin-top: 10px;
+    header p{
+      font-size: clamp(0.95rem, 2vw, 1.2rem);
+      color:var(--muted);
+      margin-top:8px;
       animation: fadeUp 1.8s ease;
     }
 
-    section {
-      max-width: 900px;
-      margin: auto;
-      padding: 40px 20px;
-      animation: fadeUp 1.5s ease;
+    main{
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 20px;
     }
 
-    h2 {
-      color: #7bb5ff;
-      border-left: 4px solid #7bb5ff;
+    section{
+      padding: 28px 10px;
+      animation: fadeUp 1.2s ease;
+    }
+
+    h2{
+      color:var(--accent-soft);
+      border-left: 4px solid var(--accent-soft);
       padding-left: 12px;
+      margin-bottom: 14px;
+      font-size: clamp(1.1rem, 2.6vw, 1.7rem);
+    }
+
+    .card{
+      background: var(--card);
+      backdrop-filter: blur(8px);
+      padding: 18px;
+      border-radius: var(--radius);
       margin-bottom: 20px;
-      font-size: 1.7rem;
+      border: 1px solid rgba(255,255,255,0.06);
+      box-shadow: 0 4px 18px rgba(0,0,0,0.45);
+      transition: transform .25s ease, box-shadow .25s ease;
+    }
+    .card:hover{
+      transform: translateY(-6px);
+      box-shadow: 0 12px 30px rgba(0,0,0,0.6);
     }
 
-    .card {
-      background: rgba(255, 255, 255, 0.04);
-      backdrop-filter: blur(10px);
-      padding: 25px;
-      border-radius: 18px;
-      margin-bottom: 30px;
-      border: 1px solid rgba(255, 255, 255, 0.07);
-      box-shadow: 0 4px 18px rgba(0, 0, 0, 0.4);
-      transition: 0.25s;
-    }
-    .card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.55);
-    }
+    ul{ margin:0; padding-left: 1.05rem; }
+    li{ margin:8px 0; }
 
-    footer {
-      text-align: center;
-      padding: 40px;
+    .contact-list a{ color: var(--text); }
+    .contact-list a:hover{ color: var(--accent-soft); }
+
+    footer{
+      text-align:center;
+      padding: 36px 12px;
       color: #8f8f8f;
-      margin-top: 60px;
-      border-top: 1px solid #1b1b1b;
+      margin-top: 40px;
+      border-top: 1px solid rgba(255,255,255,0.03);
     }
 
-    /* ANIMATIONS */
-    @keyframes fadeIn {
-      from { opacity: 0; }
-      to { opacity: 1; }
+    /* small screen layout & behavior */
+    @media (max-width: 820px){
+      .nav-menu{ 
+        position: fixed;
+        right: 12px;
+        top: 64px;
+        flex-direction: column;
+        gap: 6px;
+        background: linear-gradient(180deg, rgba(0,0,0,0.62), rgba(0,0,0,0.5));
+        padding: 12px;
+        border-radius: 12px;
+        border: 1px solid rgba(255,255,255,0.04);
+        display: none;
+        min-width: 160px;
+        z-index: 1000;
+      }
+      .nav-menu.open { display:flex; }
+      .nav-toggle{ display:inline-flex; align-items:center; gap:8px; }
+      .brand-name{ display:none; } /* optional: hide text on small screens to save space */
+      body { padding-top: 64px; }
     }
-    @keyframes fadeUp {
-      from { opacity: 0; transform: translateY(25px); }
-      to { opacity: 1; transform: translateY(0); }
+
+    /* reduce motion preference */
+    @media (prefers-reduced-motion: reduce) {
+      * { animation: none !important; transition: none !important; }
     }
+
+    /* animations */
+    @keyframes fadeIn { from{opacity:0} to{opacity:1} }
+    @keyframes fadeUp { from{opacity:0; transform:translateY(18px)} to{opacity:1; transform:none} }
   </style>
 </head>
 
 <body>
-  <nav>
-    <div style="display:flex; gap:40px;">
-      <a href="#chi-sono">Chi sono</a>
-      <a href="#competenze">Competenze</a>
-      <a href="#progetti">Progetti</a>
-      <a href="#contatti">Contatti</a>
+  <a class="skip-link" href="#main">Vai al contenuto principale</a>
+
+  <nav aria-label="Navigazione principale">
+    <div class="nav-inner">
+      <div class="brand" aria-hidden="false">
+        <img src="Logo.png" alt="Logo di Francesco" style="width:38px;height:38px;border-radius:8px;object-fit:cover;border:2px solid var(--accent);" />
+        <div>
+          <div class="brand-name">Francesco Marcucci</div>
+        </div>
+      </div>
+
+      <!-- Hamburger for small screens -->
+      <button class="nav-toggle" id="navToggle" aria-controls="primaryNav" aria-expanded="false" aria-label="Apri menu">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path stroke="currentColor" stroke-width="1.6" stroke-linecap="round" d="M3 6h18M3 12h18M3 18h18"/></svg>
+      </button>
+
+      <div class="nav-menu" id="primaryNav" role="menu">
+        <a role="menuitem" href="#chi-sono">Chi sono</a>
+        <a role="menuitem" href="#competenze">Competenze</a>
+        <a role="menuitem" href="#progetti">Progetti</a>
+        <a role="menuitem" href="#contatti">Contatti</a>
+      </div>
     </div>
   </nav>
 
   <header>
-    <img src="Logo.png" alt="Foto profilo" />
+    <!-- responsive avatar with alt -->
+    <img class="avatar" src="Logo.png" alt="Foto profilo di Francesco Marcucci" loading="lazy" />
     <h1>Francesco Marcucci</h1>
-    <p>Studente ITIS – Web Development & Programmazione</p>
+    <p>Studente ITIS – Web Development &amp; Programmazione</p>
   </header>
 
-  <section id="chi-sono">
-    <h2>Chi sono</h2>
-    <div class="card">
-      <p>
-        Sono uno studente di Informatica che sviluppa competenze attraverso progetti reali.
-        Mi concentro sullo sviluppo web e sulla programmazione, cercando di migliorare ogni giorno.
-      </p>
-    </div>
-  </section>
+  <main id="main" tabindex="-1">
+    <section id="chi-sono" aria-labelledby="chi-sono-title">
+      <h2 id="chi-sono-title">Chi sono</h2>
+      <div class="card">
+        <p>
+          Sono uno studente di Informatica che sviluppa competenze attraverso progetti reali.
+          Mi concentro sullo sviluppo web e sulla programmazione, cercando di migliorare ogni giorno.
+        </p>
+      </div>
+    </section>
 
-  <section id="competenze">
-    <h2>Competenze Tecniche</h2>
-    <div class="card">
-      <ul>
-        <li><strong>Web Development</strong> – HTML, CSS, basi di JavaScript</li>
-        <li><strong>Programmazione</strong> – C++ (scolastico), Python (base)</li>
-        <li><strong>Reti</strong> – CSMA/CD, Token Ring, protocolli</li>
-      </ul>
-    </div>
-  </section>
+    <section id="competenze" aria-labelledby="competenze-title">
+      <h2 id="competenze-title">Competenze Tecniche</h2>
+      <div class="card">
+        <ul>
+          <li><strong>Web Development</strong> – HTML, CSS, basi di JavaScript</li>
+          <li><strong>Programmazione</strong> – C++ (scolastico), Python (base)</li>
+          <li><strong>Reti</strong> – CSMA/CD, Token Ring, protocolli</li>
+        </ul>
+      </div>
+    </section>
 
-  <section id="progetti">
-    <h2>Progetti</h2>
-    <div class="card">
-      <ul>
-        <li><strong>Sito per Team Fabiana Luperini</strong> – Gestione dati tramite CSV, strutturazione informazioni. (ancora in fase di sviluppo)</li>
-        
-      </ul>
-    </div>
-  </section>
+    <section id="progetti" aria-labelledby="progetti-title">
+      <h2 id="progetti-title">Progetti</h2>
+      <div class="card">
+        <ul>
+          <li><strong>Sito per Team Fabiana Luperini</strong> – Gestione dati tramite CSV, strutturazione informazioni. (ancora in fase di sviluppo)</li>
+        </ul>
+      </div>
+    </section>
 
-  <section id="contatti">
-    <h2>Contatti</h2>
-    <div class="card">
-      <p>
-        <i class="fa-solid fa-envelope"></i> Email: francescomarcucci11@gmail.com<br>
-        <i class="fa-brands fa-github"></i> GitHub: <a href="https://github.com/Marcu08">Marcu08</a>
-      </p>
-    </div>
-  </section>
+    <section id="contatti" aria-labelledby="contatti-title">
+      <h2 id="contatti-title">Contatti</h2>
+      <div class="card contact-list">
+        <p>
+          <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+          <span class="sr-only">Email:</span>
+          Email: <a href="mailto:francescomarcucci11@gmail.com">francescomarcucci11@gmail.com</a><br>
+          <i class="fa-brands fa-github" aria-hidden="true"></i>
+          <span class="sr-only">GitHub:</span>
+          GitHub: <a href="https://github.com/Marcu08" target="_blank" rel="noopener noreferrer">Marcu08</a>
+        </p>
+      </div>
+    </section>
+  </main>
 
   <footer>
     © 2025 – Portfolio di Francesco Marcucci
     <br><small>Pronto per GitHub Pages</small>
   </footer>
 
+  <script>
+    // Small accessible nav toggle script
+    (function(){
+      const btn = document.getElementById('navToggle');
+      const menu = document.getElementById('primaryNav');
+
+      if(!btn || !menu) return;
+
+      function setExpanded(v){
+        btn.setAttribute('aria-expanded', String(v));
+        if(v) menu.classList.add('open');
+        else menu.classList.remove('open');
+      }
+
+      btn.addEventListener('click', function(){
+        const expanded = btn.getAttribute('aria-expanded') === 'true';
+        setExpanded(!expanded);
+      });
+
+      // close when a link is clicked (mobile)
+      Array.from(menu.querySelectorAll('a')).forEach(a => {
+        a.addEventListener('click', () => setExpanded(false));
+      });
+
+      // close menu on Escape
+      document.addEventListener('keydown', (e) => {
+        if(e.key === 'Escape') setExpanded(false);
+      });
+
+      // close when clicking outside on small screens
+      document.addEventListener('click', (e) => {
+        if(window.matchMedia('(max-width: 820px)').matches){
+          if(!menu.contains(e.target) && !btn.contains(e.target)){
+            setExpanded(false);
+          }
+        }
+      });
+    })();
+  </script>
 </body>
 </html>
