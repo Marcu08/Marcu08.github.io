@@ -378,18 +378,33 @@ a {
         padding: 20px;
     }
 
+    .site-header {
+        gap: 8px;
+        padding: 12px 10px;
+    }
+
     .main-nav {
-        justify-content: flex-end;
-        gap: 10px;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        gap: 8px;
+        min-width: 0;
+        overflow-x: auto;
+        white-space: nowrap;
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+
+    .main-nav::-webkit-scrollbar {
+        display: none;
     }
 
     .main-nav a {
-        font-size: 0.82rem;
+        font-size: 0.72rem;
     }
 
     .logo {
-        font-size: 0.95rem;
-        padding: 7px 12px;
+        font-size: 0.8rem;
+        padding: 6px 9px;
     }
 
     .hero-card {
