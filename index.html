@@ -23,6 +23,20 @@
       --text: #e5e7eb;
       --card: #1e293b;
     }
+    #theme-toggle {
+  background-color: var(--card); /* sfondo visibile */
+  color: var(--text);             /* colore dell’icona */
+  font-size: 1.5rem;              /* icona più grande */
+  padding: 0.5rem 0.7rem;         /* area cliccabile più ampia */
+  border-radius: 8px;             /* arrotondato carino */
+  border: 1px solid var(--text);
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+#theme-toggle:hover {
+  background-color: var(--text);
+  color: var(--bg);
+}
 
     /* Applica colori */
     body {
