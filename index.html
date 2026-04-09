@@ -9,64 +9,45 @@
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Manrope:wght@400;600;700&display=swap" rel="stylesheet">
   <script src="https://kit.fontawesome.com/a2e0b5a56c.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="style.css" />
+
   <style>
-    /* Tema chiaro (default) */
+    /* =====================
+       VARIABILI DI TEMA
+    ===================== */
     :root {
       --bg: #ffffff;
       --text: #111111;
-      --card: #f5f5f5;
+      --card: #f0f0f0;
+      --border: #cccccc;
+      --accent: #2563eb;
     }
 
-    /* Tema scuro */
     .dark-mode {
       --bg: #0f172a;
       --text: #e5e7eb;
       --card: #1e293b;
+      --border: #334155;
+      --accent: #60a5fa;
     }
-    #theme-toggle {
-  background-color: var(--card); /* sfondo visibile */
-  color: var(--text);             /* colore dell’icona */
-  font-size: 1.5rem;              /* icona più grande */
-  padding: 0.5rem 0.7rem;         /* area cliccabile più ampia */
-  border-radius: 8px;             /* arrotondato carino */
-  border: 1px solid var(--text);
-  cursor: pointer;
-  transition: background-color 0.3s, color 0.3s;
-}
-#theme-toggle:hover {
-  background-color: var(--text);
-  color: var(--bg);
-}
 
-    /* Applica colori */
+    /* =====================
+       BASE
+    ===================== */
+    *, *::before, *::after {
+      box-sizing: border-box;
+    }
+
     body {
       background-color: var(--bg);
       color: var(--text);
-      transition: background-color 0.3s, color 0.3s;
       font-family: 'Manrope', sans-serif;
+      margin: 0;
+      transition: background-color 0.3s, color 0.3s;
     }
 
-    .panel,
-    .project-card,
-    .hero-card,
-    .photo-box {
-      background-color: var(--card);
-      transition: background-color 0.3s;
-      padding: 1rem;
-      border-radius: 8px;
-    }
-
-    /* Bottone toggle */
-    #theme-toggle {
-      background: none;
-      border: none;
-      font-size: 1.2rem;
-      cursor: pointer;
-      color: var(--text);
-      margin-left: 1rem;
-    }
-
-    /* Posizionamento toggle accanto alla nav */
+    /* =====================
+       HEADER
+    ===================== */
     .site-header {
       display: flex;
       align-items: center;
@@ -75,8 +56,331 @@
       position: sticky;
       top: 0;
       background-color: var(--bg);
+      border-bottom: 1px solid var(--border);
       z-index: 1000;
-      transition: background-color 0.3s;
+      transition: background-color 0.3s, border-color 0.3s;
+    }
+
+    .logo {
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 700;
+      font-size: 1.4rem;
+      color: var(--text);
+      text-decoration: none;
+    }
+
+    .main-nav {
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    .main-nav a {
+      color: var(--text);
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.95rem;
+      transition: color 0.2s;
+    }
+
+    .main-nav a:hover {
+      color: var(--accent);
+    }
+
+    /* =====================
+       TOGGLE BOTTONE — UNICA REGOLA, NESSUN CONFLITTO
+    ===================== */
+    #theme-toggle {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 2.4rem;
+      height: 2.4rem;
+      background-color: var(--card);
+      color: var(--text);
+      border: 1.5px solid var(--border);
+      border-radius: 8px;
+      font-size: 1.1rem;
+      cursor: pointer;
+      transition: background-color 0.25s, color 0.25s, border-color 0.25s, transform 0.15s;
+      flex-shrink: 0;
+    }
+
+    #theme-toggle:hover {
+      background-color: var(--accent);
+      color: #ffffff;
+      border-color: var(--accent);
+      transform: scale(1.08);
+    }
+
+    /* =====================
+       LAYOUT GENERALE
+    ===================== */
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    .section {
+      padding: 4rem 0;
+    }
+
+    h2 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 1.8rem;
+      margin-bottom: 1.2rem;
+    }
+
+    /* =====================
+       HERO
+    ===================== */
+    .hero {
+      display: flex;
+      gap: 2.5rem;
+      align-items: flex-start;
+      padding: 4rem 1.5rem;
+      flex-wrap: wrap;
+    }
+
+    .hero-text {
+      flex: 1;
+      min-width: 260px;
+    }
+
+    .eyebrow {
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 0.5rem;
+    }
+
+    .hero-text h1 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 2rem;
+      line-height: 1.25;
+      margin: 0.5rem 0 1rem;
+    }
+
+    .lead {
+      line-height: 1.7;
+      margin-bottom: 1rem;
+      opacity: 0.85;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      margin-top: 1.5rem;
+    }
+
+    /* =====================
+       HERO CARD
+    ===================== */
+    .hero-card {
+      background-color: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.5rem;
+      min-width: 220px;
+      max-width: 280px;
+      transition: background-color 0.3s, border-color 0.3s;
+    }
+
+    .hero-card img {
+      max-width: 80px;
+      margin-bottom: 1rem;
+      display: block;
+    }
+
+    .card-title {
+      font-weight: 700;
+      margin-bottom: 0.4rem;
+    }
+
+    .card-desc {
+      font-size: 0.9rem;
+      opacity: 0.8;
+      margin-bottom: 0.8rem;
+      line-height: 1.6;
+    }
+
+    .hero-card ul {
+      padding-left: 1.2rem;
+      font-size: 0.9rem;
+      line-height: 1.8;
+    }
+
+    /* =====================
+       BOTTONI
+    ===================== */
+    .btn {
+      display: inline-block;
+      padding: 0.65rem 1.3rem;
+      border-radius: 8px;
+      font-weight: 700;
+      font-size: 0.9rem;
+      text-decoration: none;
+      transition: all 0.2s;
+    }
+
+    .btn-primary {
+      background-color: var(--accent);
+      color: #ffffff;
+      border: 2px solid var(--accent);
+    }
+
+    .btn-primary:hover {
+      opacity: 0.85;
+    }
+
+    .btn-secondary {
+      background-color: transparent;
+      color: var(--text);
+      border: 2px solid var(--border);
+    }
+
+    .btn-secondary:hover {
+      border-color: var(--accent);
+      color: var(--accent);
+    }
+
+    /* =====================
+       PANNELLI COMPETENZE
+    ===================== */
+    .grid.cards-3 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .panel {
+      background-color: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.4rem;
+      transition: background-color 0.3s, border-color 0.3s;
+    }
+
+    .panel h3 {
+      margin-top: 0;
+      font-family: 'Space Grotesk', sans-serif;
+    }
+
+    /* =====================
+       PROJECT CARD
+    ===================== */
+    .project-card {
+      background-color: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.5rem;
+      transition: background-color 0.3s, border-color 0.3s;
+    }
+
+    .project-tag {
+      font-size: 0.78rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--accent);
+      margin-bottom: 0.3rem;
+    }
+
+    /* =====================
+       PHOTO BOX
+    ===================== */
+    .photo-box {
+      background-color: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.5rem;
+      transition: background-color 0.3s, border-color 0.3s;
+    }
+
+    /* =====================
+       CONTATTI
+    ===================== */
+    .contact-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 0.8rem;
+      margin-top: 1.2rem;
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 0.7rem;
+      color: var(--text);
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.2s;
+    }
+
+    .contact-item:hover {
+      color: var(--accent);
+    }
+
+    /* =====================
+       FOOTER
+    ===================== */
+    .site-footer {
+      text-align: center;
+      padding: 2rem 1.5rem;
+      font-size: 0.85rem;
+      opacity: 0.6;
+      border-top: 1px solid var(--border);
+      margin-top: 2rem;
+    }
+
+    /* =====================
+       REVEAL ANIMATION
+    ===================== */
+    .reveal {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.5s ease, transform 0.5s ease;
+    }
+
+    .reveal.is-visible {
+      opacity: 1;
+      transform: none;
+    }
+
+    /* =====================
+       BG SHAPES (decorative)
+    ===================== */
+    .bg-shape {
+      position: fixed;
+      border-radius: 50%;
+      filter: blur(80px);
+      opacity: 0.07;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .bg-shape-1 {
+      width: 500px;
+      height: 500px;
+      background: var(--accent);
+      top: -150px;
+      right: -150px;
+    }
+
+    .bg-shape-2 {
+      width: 400px;
+      height: 400px;
+      background: #a855f7;
+      bottom: -100px;
+      left: -100px;
+    }
+
+    main {
+      position: relative;
+      z-index: 1;
     }
   </style>
 </head>
@@ -141,8 +445,8 @@
       </p>
       <p>
         Nello sviluppo seguo un metodo semplice: prima definisco il problema, poi progetto una soluzione
-        ordinata e infine la rifinisco con attenzione ai dettagli visivi e alla leggibilita dei contenuti.
-        Questo approccio mi aiuta a crescere in modo costante e a creare lavori sempre piu solidi.
+        ordinata e infine la rifinisco con attenzione ai dettagli visivi e alla leggibilità dei contenuti.
+        Questo approccio mi aiuta a crescere in modo costante e a creare lavori sempre più solidi.
       </p>
     </section>
 
@@ -152,7 +456,7 @@
         <article class="panel">
           <h3>Web Development</h3>
           <p>HTML, CSS, basi JavaScript e attenzione a UX/UI.</p>
-          <p>Strutturo pagine responsive e facili da navigare, con focus su chiarezza e performance.</p>
+          <p>Struttura pagine responsive e facili da navigare, con focus su chiarezza e performance.</p>
         </article>
         <article class="panel">
           <h3>Programmazione</h3>
@@ -161,7 +465,7 @@
         </article>
         <article class="panel">
           <h3>Reti</h3>
-          <p>Fondamenti su protocolli,Creazione di reti, programmazione di uno switch, sniffing e molto altro ancora.</p>
+          <p>Fondamenti su protocolli, creazione di reti, programmazione di uno switch, sniffing e molto altro ancora.</p>
           <p>Conoscenze utili per comprendere il funzionamento delle infrastrutture di comunicazione.</p>
         </article>
       </div>
@@ -178,7 +482,7 @@
             integrazione dati e organizzazione contenuti per una consultazione semplice.
           </p>
           <p>
-            In questo progetto sto lavorando su affidabilita dei contenuti, aggiornamento ordinato delle informazioni
+            In questo progetto sto lavorando su affidabilità dei contenuti, aggiornamento ordinato delle informazioni
             e una presentazione visiva professionale, pensata per utenti reali e non solo per test scolastici.
           </p>
         </div>
@@ -193,8 +497,8 @@
           Le gallery complete sono disponibili qui.
         </p>
         <p>
-          La fotografia sportiva per me e attenzione al timing, scelta del punto di ripresa
-          e capacita di cogliere i momenti decisivi di una gara.
+          La fotografia sportiva per me è attenzione al timing, scelta del punto di ripresa
+          e capacità di cogliere i momenti decisivi di una gara.
         </p>
         <a class="btn btn-primary" href="http://www.teamfabianaluperini.it/gallery-gare.html" target="_blank" rel="noopener noreferrer">
           Apri tutte le gallery
@@ -236,29 +540,28 @@
         }
       });
     }, { threshold: 0.12 });
-
     revealElements.forEach((el) => observer.observe(el));
 
-    // Anno corrente
+    // Anno corrente nel footer
     document.getElementById('year').textContent = new Date().getFullYear();
 
     // Toggle tema chiaro/scuro
-    const toggleBtn = document.getElementById("theme-toggle");
+    const toggleBtn = document.getElementById('theme-toggle');
     const body = document.body;
 
-    if (localStorage.getItem("theme") === "dark") {
-      body.classList.add("dark-mode");
+    // Applica tema salvato
+    if (localStorage.getItem('theme') === 'dark') {
+      body.classList.add('dark-mode');
       toggleBtn.innerHTML = '<i class="fa-solid fa-sun"></i>';
     }
 
-    toggleBtn.addEventListener("click", () => {
-      body.classList.toggle("dark-mode");
-
-      if (body.classList.contains("dark-mode")) {
-        localStorage.setItem("theme", "dark");
+    toggleBtn.addEventListener('click', () => {
+      body.classList.toggle('dark-mode');
+      if (body.classList.contains('dark-mode')) {
+        localStorage.setItem('theme', 'dark');
         toggleBtn.innerHTML = '<i class="fa-solid fa-sun"></i>';
       } else {
-        localStorage.setItem("theme", "light");
+        localStorage.setItem('theme', 'light');
         toggleBtn.innerHTML = '<i class="fa-solid fa-moon"></i>';
       }
     });
