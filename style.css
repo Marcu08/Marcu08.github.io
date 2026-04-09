@@ -13,6 +13,109 @@
     --shadow: 0 22px 60px rgba(20, 27, 58, 0.16);
 }
 
+/* Dark Mode */
+body.dark-mode {
+    --bg: #0f172a;
+    --surface: #1a2744;
+    --ink: #e5e7eb;
+    --muted: #9ca3af;
+    --primary: #3b82f6;
+    --primary-dark: #60a5fa;
+    --accent: #f97316;
+    --line: #334155;
+}
+
+body.dark-mode .bg-shape-1 {
+    background: #1e3a5f;
+    opacity: 0.3;
+}
+
+body.dark-mode .bg-shape-2 {
+    background: #5a3a2a;
+    opacity: 0.3;
+}
+
+body.dark-mode .site-header {
+    background: rgba(15, 23, 42, 0.8);
+    border-bottom-color: rgba(226, 232, 240, 0.1);
+}
+
+body.dark-mode .eyebrow {
+    background: rgba(59, 130, 246, 0.15);
+    border-color: rgba(59, 130, 246, 0.25);
+    color: #93c5fd;
+}
+
+body.dark-mode .hero-card {
+    background: linear-gradient(165deg, #1a2744 0%, #0f172a 100%);
+    border-color: rgba(226, 232, 240, 0.1);
+}
+
+body.dark-mode .hero-card img {
+    border-color: #1a2744;
+    box-shadow: 0 6px 18px rgba(59, 130, 246, 0.15);
+}
+
+body.dark-mode .btn-secondary {
+    color: #93c5fd;
+    background: rgba(59, 130, 246, 0.1);
+    border-color: rgba(59, 130, 246, 0.25);
+}
+
+body.dark-mode .section {
+    background: rgba(26, 39, 68, 0.5);
+    border-color: rgba(226, 232, 240, 0.1);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+body.dark-mode .panel {
+    background: #1a2744;
+    border-color: rgba(226, 232, 240, 0.1);
+}
+
+body.dark-mode .project-card {
+    background: linear-gradient(150deg, #1a3a52 0%, #1a2744 100%);
+    border-color: rgba(226, 232, 240, 0.1);
+}
+
+body.dark-mode .photo-box {
+    background: #1a2744;
+    border-color: rgba(226, 232, 240, 0.2);
+}
+
+body.dark-mode .contact-item {
+    background: #1a2744;
+    color: var(--ink);
+    border-color: rgba(226, 232, 240, 0.1);
+}
+
+body.dark-mode .contact-item:hover {
+    border-color: rgba(59, 130, 246, 0.3);
+}
+
+/* Theme Toggle Button */
+#theme-toggle {
+    background: none;
+    border: none;
+    font-size: 1.3rem;
+    cursor: pointer;
+    color: var(--ink);
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+#theme-toggle:hover {
+    background-color: var(--line);
+}
+
+body.dark-mode #theme-toggle:hover {
+    background-color: rgba(226, 232, 240, 0.1);
+}
+
 * {
     box-sizing: border-box;
 }
