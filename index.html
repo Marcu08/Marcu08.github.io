@@ -9,6 +9,62 @@
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Manrope:wght@400;600;700&display=swap" rel="stylesheet">
   <script src="https://kit.fontawesome.com/a2e0b5a56c.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="style.css" />
+  <style>
+    /* Tema chiaro (default) */
+    :root {
+      --bg: #ffffff;
+      --text: #111111;
+      --card: #f5f5f5;
+    }
+
+    /* Tema scuro */
+    .dark-mode {
+      --bg: #0f172a;
+      --text: #e5e7eb;
+      --card: #1e293b;
+    }
+
+    /* Applica colori */
+    body {
+      background-color: var(--bg);
+      color: var(--text);
+      transition: background-color 0.3s, color 0.3s;
+      font-family: 'Manrope', sans-serif;
+    }
+
+    .panel,
+    .project-card,
+    .hero-card,
+    .photo-box {
+      background-color: var(--card);
+      transition: background-color 0.3s;
+      padding: 1rem;
+      border-radius: 8px;
+    }
+
+    /* Bottone toggle */
+    #theme-toggle {
+      background: none;
+      border: none;
+      font-size: 1.2rem;
+      cursor: pointer;
+      color: var(--text);
+      margin-left: 1rem;
+    }
+
+    /* Posizionamento toggle accanto alla nav */
+    .site-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1rem 2rem;
+      position: sticky;
+      top: 0;
+      background-color: var(--bg);
+      z-index: 1000;
+      transition: background-color 0.3s;
+    }
+  </style>
 </head>
 
 <body>
@@ -24,6 +80,9 @@
       <a href="#photo">Fotografia</a>
       <a href="#contact">Contatti</a>
     </nav>
+    <button id="theme-toggle" aria-label="Cambia tema">
+      <i class="fa-solid fa-moon"></i>
+    </button>
   </header>
 
   <main id="home">
@@ -153,6 +212,7 @@
   </footer>
 
   <script>
+    // Animazioni reveal
     const revealElements = document.querySelectorAll('.reveal');
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
@@ -164,8 +224,30 @@
     }, { threshold: 0.12 });
 
     revealElements.forEach((el) => observer.observe(el));
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
 
+    // Anno corrente
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Toggle tema chiaro/scuro
+    const toggleBtn = document.getElementById("theme-toggle");
+    const body = document.body;
+
+    if (localStorage.getItem("theme") === "dark") {
+      body.classList.add("dark-mode");
+      toggleBtn.innerHTML = '<i class="fa-solid fa-sun"></i>';
+    }
+
+    toggleBtn.addEventListener("click", () => {
+      body.classList.toggle("dark-mode");
+
+      if (body.classList.contains("dark-mode")) {
+        localStorage.setItem("theme", "dark");
+        toggleBtn.innerHTML = '<i class="fa-solid fa-sun"></i>';
+      } else {
+        localStorage.setItem("theme", "light");
+        toggleBtn.innerHTML = '<i class="fa-solid fa-moon"></i>';
+      }
+    });
+  </script>
 </body>
 </html>
