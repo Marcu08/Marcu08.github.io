@@ -131,6 +131,7 @@ body.dark-mode #theme-toggle:hover {
 
 html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
 body {
