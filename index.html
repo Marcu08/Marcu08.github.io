@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Portfolio di Francesco Marcucci: web developer in crescita e sport photographer. Progetti web, competenze tecniche e gallery fotografiche." />
-  <title>Francesco Marcucci | Portfolio</title>
+  <meta name="description" content="Francesco Marcucci — Full Stack Developer. Automazione, OCR, backend." />
+  <title>Francesco Marcucci | Full Stack Developer</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Manrope:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
   <script src="https://kit.fontawesome.com/a2e0b5a56c.js" crossorigin="anonymous"></script>
   <link rel="icon" type="image/png" sizes="32x32" href="Logo.png">
   <link rel="stylesheet" href="style.css" />
@@ -19,278 +19,237 @@
 
   <header class="site-header">
     <a class="logo" href="#home">FM</a>
-    <nav class="main-nav" aria-label="Navigazione principale">
-      <a href="#about">Chi sono</a>
-      <a href="#skills">Competenze</a>
-      <a href="#projects">Progetti</a>
-      <a href="#photo">Fotografia</a>
-      <a href="#contact">Contatti</a>
+    <nav class="main-nav">
+      <a href="#work">Work</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
     </nav>
-    <button id="theme-toggle" aria-label="Cambia tema">
-      <i class="fa-solid fa-moon"></i>
-    </button>
+    <div class="header-actions">
+      <a class="header-link" href="https://github.com/Marcu08" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i></a>
+      <a class="header-link" href="https://www.linkedin.com/in/francesco-marcucci-b68919306/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin"></i></a>
+      <button id="theme-toggle" aria-label="Toggle theme"><i class="fa-solid fa-moon"></i></button>
+    </div>
   </header>
 
   <main id="home">
-    <section class="hero container reveal">
-      <div class="hero-text">
-        <p class="eyebrow">Portfolio Personale</p>
-        <h1>Francesco Marcucci<br>Web Developer in crescita e Sport Photographer</h1>
-        <p class="lead">
-          Realizzo progetti web ordinati, veloci e curati nei dettagli.
-          Affianco al codice la fotografia sportiva, con attenzione a ritmo, emozione e storytelling visivo.
-        </p>
-        <p class="lead">
-          Il mio obiettivo è costruire esperienze digitali chiare e affidabili: siti che non sono solo belli,
-          ma che comunicano bene e aiutano davvero chi li usa ogni giorno.
-        </p>
+
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-inner">
+        <p class="hero-badge"><span class="hero-badge-dot"></span> Building <strong>DevOS</strong></p>
+        <h1 class="hero-title">Francesco Marcucci</h1>
+        <p class="hero-sub">I build software that eliminates manual work.</p>
+        <p class="hero-desc">Automation · OCR · Backend Systems</p>
         <div class="hero-actions">
-          <a class="btn btn-primary" href="#projects">Guarda i progetti</a>
-          <a class="btn btn-secondary" href="#contact">Parliamone</a>
+          <a class="btn btn-primary" href="#work">See my work <i class="fa-solid fa-arrow-down"></i></a>
+          <a class="btn btn-secondary" href="https://github.com/Marcu08" target="_blank"><i class="fa-brands fa-github"></i> GitHub</a>
         </div>
       </div>
-
-      <aside class="hero-card" aria-label="Focus attuale">
-        <img src="Logo.png" alt="Logo Francesco Marcucci" />
-        <p class="card-title">Focus attuale</p>
-        <p class="card-desc">
-          In questo periodo sto consolidando competenze tecniche e creative,
-          con l'obiettivo di offrire progetti web curati e contenuti visivi efficaci.
-        </p>
-        <ul>
-          <li>Siti web moderni e ben strutturati</li>
-          <li>Frontend responsive e attenzione UX</li>
-          <li>Fotografia sportiva per eventi e gare</li>
-        </ul>
-      </aside>
     </section>
 
-    <section id="about" class="container section reveal">
-      <h2>Chi sono</h2>
-      <p>
-        Sono uno studente ITIS indirizzo Informatica e trasformo lo studio in progetti concreti.
-        Mi piace lavorare su siti chiari e professionali, mantenendo una struttura pulita e facile da usare.
-        Attualmente sto approfondendo <strong>PHP</strong> e <strong>SQLite</strong> per lo sviluppo web lato backend,
-        oltre a <strong>Python</strong>, <strong>Assembly</strong> e l'architettura hardware/software dei calcolatori.
-      </p>
-      <p>
-        Nello sviluppo seguo un metodo semplice: prima definisco il problema, poi progetto una soluzione
-        ordinata e infine la rifinisco con attenzione ai dettagli visivi e alla leggibilità dei contenuti.
-        Questo approccio mi aiuta a crescere in modo costante e a creare lavori sempre più solidi.
-      </p>
-    </section>
-
-    <section id="skills" class="container section reveal">
-      <h2>Competenze</h2>
-      <div class="grid cards-3">
-        <article class="panel">
-          <h3>Web Development</h3>
-          <p>HTML, CSS, JavaScript (anche lato backend con Node.js) e attenzione a UX/UI.</p>
-          <p>Strutturo pagine responsive e facili da navigare, con focus su chiarezza e performance.</p>
-        </article>
-        <article class="panel">
-          <h3>Programmazione & Backend</h3>
-          <p>C++ e Java in ambito scolastico, Python a livello base, PHP e SQLite per lo sviluppo backend.</p>
-          <p>Applico la logica algoritmica per risolvere problemi e organizzare meglio i progetti.</p>
-        </article>
-        <article class="panel">
-          <h3>Reti</h3>
-          <p>Fondamenti su protocolli, creazione di reti, programmazione di uno switch, sniffing e molto altro ancora.</p>
-          <p>Conoscenze utili per comprendere il funzionamento delle infrastrutture di comunicazione.</p>
-        </article>
+    <!-- METRICS -->
+    <section class="metrics-bar container">
+      <div class="metric-item">
+        <span class="metric-val">98%</span>
+        <span class="metric-lbl">OCR Accuracy</span>
+      </div>
+      <div class="metric-divider"></div>
+      <div class="metric-item">
+        <span class="metric-val">30m → 2s</span>
+        <span class="metric-lbl">Dev Setup</span>
+      </div>
+      <div class="metric-divider"></div>
+      <div class="metric-item">
+        <span class="metric-val">3</span>
+        <span class="metric-lbl">Real Clients</span>
+      </div>
+      <div class="metric-divider"></div>
+      <div class="metric-item">
+        <span class="metric-val">5</span>
+        <span class="metric-lbl">Apps Shipped</span>
       </div>
     </section>
 
-    <section id="projects" class="container section reveal">
-      <h2>Progetti</h2>
-      <div class="grid cards-2">
-        <article class="project-card">
-          <div>
-            <p class="project-tag">Progetto in continua evoluzione</p>
-            <h3>Sito Team Fabiana Luperini</h3>
-            <p>
-              Sviluppo di un sito web con gestione di informazioni strutturate,
-              integrazione dati e un'organizzazione dei contenuti pensata per una consultazione immediata e semplice.
-            </p>
-            <p class="project-stack">
-              <span class="stack-tag">HTML</span>
-              <span class="stack-tag">CSS</span>
-              <span class="stack-tag">JavaScript</span>
-              <span class="stack-tag">PHP</span>
-            </p>
-            <p>
-              In questo progetto ho lavorato sull'affidabilità dei contenuti e su una presentazione visiva professionale, rivolta ad utenti reali.
-            </p>
-            <p class="project-note">
-              <i class="fa-solid fa-lock" aria-hidden="true"></i> Codice privato su richiesta del cliente.
-            </p>
+    <!-- DEVOS — GIANT -->
+    <section class="container section featured-section reveal" id="work">
+      <p class="section-eyebrow">Featured</p>
+      <h2 class="section-title-lg">DevOS</h2>
+      <div class="featured-image">
+        <img src="screenshot-devos.png" alt="DevOS" loading="lazy" onerror="this.style.display='none'" />
+        <div class="featured-image-fallback"><i class="fa-solid fa-terminal"></i></div>
+      </div>
+      <div class="devos-flow">
+        <div class="flow-step">
+          <span class="flow-label">Problem</span>
+          <p>Manual patching, rollback, environment setup — 30+ min, error-prone.</p>
+        </div>
+        <div class="flow-arrow">→</div>
+        <div class="flow-step">
+          <span class="flow-label">Solution</span>
+          <p>Node.js agent + PowerShell — orchestrates patches, validates, auto-rolls back.</p>
+        </div>
+        <div class="flow-arrow">→</div>
+        <div class="flow-step">
+          <span class="flow-label">Result</span>
+          <p>30 min → 2 seconds. Zero manual intervention. Resilient.</p>
+        </div>
+      </div>
+      <div class="featured-metric">
+        <span class="featured-metric-val">30 min</span>
+        <span class="featured-arrow">→</span>
+        <span class="featured-metric-val">2 sec</span>
+      </div>
+      <a class="btn btn-secondary" href="https://github.com/Marcu08/DevOS" target="_blank"><i class="fa-brands fa-github"></i> View on GitHub</a>
+    </section>
+
+    <!-- PROJECTS -->
+    <section class="container section reveal">
+      <p class="section-eyebrow">Projects</p>
+      <h2 class="section-title-lg">Problems I've solved</h2>
+
+      <div class="projects-list">
+
+        <!-- OCR — BIG -->
+        <article class="project-card project-card-lg">
+          <div class="project-visual">
+            <div class="project-result-badge">98% accuracy</div>
+            <img src="screenshot-ocr.png" alt="OCR Scanner" loading="lazy" onerror="this.style.display='none'" />
+            <div class="project-img-fallback"><i class="fa-solid fa-file-image"></i></div>
           </div>
-          <div class="project-card-actions">
-            <a class="btn btn-secondary" href="https://www.teamfabianaluperini.it" target="_blank" rel="noopener noreferrer">
-              Vai al sito <i class="fa-solid fa-arrow-right btn-icon" aria-hidden="true"></i>
-            </a>
+          <div class="project-info">
+            <h3>OCR Scanner</h3>
+            <p>Manual data entry from paper documents → automated pipeline: image preprocessing, OCR recognition, validation.</p>
+            <div class="project-metric">
+              <span class="pm-before">Manual entry</span>
+              <span class="pm-arrow">→</span>
+              <span class="pm-after">98% automated</span>
+            </div>
           </div>
         </article>
 
+        <!-- SISTEMA FERIE -->
         <article class="project-card">
-          <div>
-            <p class="project-tag">Progetto completato</p>
-            <h3>Sito Logistic Solution</h3>
-            <p>
-              Miglioramento del sito web aziendale B2B per la logistica Logistic Solution tramite WordPress.
-            </p>
-            <p>
-              Mi sono concentrato su un revamping grafico e strutturale per offrire una prima impressione più professionale e moderna, con l'obiettivo di favorire una maggiore acquisizione di nuovi clienti.
-            </p>
-            <p class="project-note">
-              <i class="fa-solid fa-lock" aria-hidden="true"></i> Codice privato su richiesta del cliente.
-            </p>
+          <div class="project-visual">
+            <div class="project-result-badge">Excel → Platform</div>
+            <img src="screenshot-gestione-ferie.png" alt="Sistema Ferie" loading="lazy" onerror="this.style.display='none'" />
+            <div class="project-img-fallback"><i class="fa-solid fa-calendar"></i></div>
           </div>
-          <div class="project-card-actions">
-            <a class="btn btn-secondary" href="https://www.logisticsolution.net" target="_blank" rel="noopener noreferrer">
-              Vai al sito <i class="fa-solid fa-arrow-right btn-icon" aria-hidden="true"></i>
-            </a>
+          <div class="project-info">
+            <h3>Sistema Ferie</h3>
+            <p>Shared Excel sheets for leave management → web platform with approval workflow.</p>
+            <div class="project-metric">
+              <span class="pm-before">Excel chaos</span>
+              <span class="pm-arrow">→</span>
+              <span class="pm-after">Centralized system</span>
+            </div>
           </div>
         </article>
 
+        <!-- LS-SOFFAS -->
         <article class="project-card">
-          <div>
-            <p class="project-tag">Progetto in sviluppo (v1.0)</p>
-            <h3>DevOS</h3>
-            <p>
-              Tool di automazione personale che orchestra ambienti di sviluppo tramite PowerShell e un agente Node.js.
-              Applica patch, valida i risultati e gestisce automaticamente tentativi e rollback — una v1.0 sperimentale
-              con alcuni bug architetturali noti, in continua evoluzione.
-            </p>
-            <p class="project-stack">
-              <span class="stack-tag">JavaScript</span>
-              <span class="stack-tag">Node.js</span>
-              <span class="stack-tag">PowerShell</span>
-            </p>
+          <div class="project-visual">
+            <div class="project-result-badge">PDF → Database</div>
+            <img src="screenshot-ls-Soffass.png" alt="LS-SOFFAS" loading="lazy" />
           </div>
-          <div class="project-card-actions">
-            <a class="btn btn-secondary" href="https://github.com/Marcu08/DevOS" target="_blank" rel="noopener noreferrer">
-              Vedi codice <i class="fa-brands fa-github btn-icon" aria-hidden="true"></i>
-            </a>
-          </div>
-        </article>
-
-        <article class="project-card">
-          <div>
-            <p class="project-tag">Progetto completato</p>
+          <div class="project-info">
             <h3>LS-SOFFAS</h3>
-            <p>
-              Applicazione web per la gestione e l'organizzazione di dati strutturati. Progetto sviluppato con focus
-              su logica di backend e interazione con dati.
-            </p>
-            <p class="project-stack">
-              <span class="stack-tag">JavaScript</span>
-              <span class="stack-tag">Node.js</span>
-            </p>
-          </div>
-          <div class="project-card-actions">
-            <a class="btn btn-secondary" href="https://github.com/Marcu08/LS-SOFFAS" target="_blank" rel="noopener noreferrer">
-              Vedi codice <i class="fa-brands fa-github btn-icon" aria-hidden="true"></i>
-            </a>
+            <p>Unstructured data from PDF uploads → structured database with queries and reports.</p>
+            <div class="project-metric">
+              <span class="pm-before">PDF uploads</span>
+              <span class="pm-arrow">→</span>
+              <span class="pm-after">Queryable DB</span>
+            </div>
+            <a class="btn btn-secondary btn-sm" href="https://github.com/Marcu08/LS-SOFFAS" target="_blank"><i class="fa-brands fa-github"></i> Code</a>
           </div>
         </article>
 
+        <!-- TFL -->
         <article class="project-card">
-          <div>
-            <p class="project-tag">Progetto scolastico</p>
-            <h3>Sito Pratico TPSIT Film</h3>
-            <p>
-              Sito web realizzato come progetto di fine anno per TPSIT in 4° superiore,
-              con l'obiettivo di mettere in pratica le conoscenze di programmazione web acquisite durante l'anno.
-            </p>
-            <p class="project-stack">
-              <span class="stack-tag">HTML</span>
-              <span class="stack-tag">CSS</span>
-              <span class="stack-tag">JavaScript</span>
-            </p>
+          <div class="project-visual">
+            <img src="screenshot-tfl.png" alt="Team Fabiana Luperini" loading="lazy" />
           </div>
-          <div class="project-card-actions">
-            <a class="btn btn-secondary" href="https://github.com/Marcu08/Sito_Pratico_TPSIT_Film" target="_blank" rel="noopener noreferrer">
-              Vedi codice <i class="fa-brands fa-github btn-icon" aria-hidden="true"></i>
-            </a>
+          <div class="project-info">
+            <h3>Team Fabiana Luperini</h3>
+            <p>Professional website for a women's cycling team. Structured content, clean design.</p>
+            <a class="btn btn-secondary btn-sm" href="https://www.teamfabianaluperini.it" target="_blank">Visit <i class="fa-solid fa-arrow-right"></i></a>
           </div>
         </article>
+
+        <!-- LOGISTIC -->
+        <article class="project-card">
+          <div class="project-visual">
+            <img src="screenshot-ls.png" alt="Logistic Solution" loading="lazy" />
+          </div>
+          <div class="project-info">
+            <h3>Logistic Solution</h3>
+            <p>Outdated B2B website → modern redesign to attract new clients.</p>
+            <a class="btn btn-secondary btn-sm" href="https://www.logisticsolution.net" target="_blank">Visit <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </article>
+
       </div>
     </section>
 
-    <section id="photo" class="container section reveal">
-      <h2>Fotografia sportiva</h2>
-      <div class="photo-box">
-        <div class="photo-copy">
-          <p>
-            Seguo eventi e gare raccontando l'azione attraverso immagini dinamiche.
-            Le gallery complete sono ospitate su un sito dedicato, sviluppato e gestito da me.
-          </p>
-          <p>
-            La fotografia sportiva per me è attenzione al timing, scelta del punto di ripresa
-            e capacità di cogliere i momenti decisivi di una gara, ma non solo:
-            mi appassiona anche immortalare la tensione delle atlete prima della partenza
-            e la felicità di una vittoria appena conquistata.
-          </p>
-        </div>
-        <div class="photo-previews">
-          <a href="https://francescomarcucci-ph.pages.dev/" target="_blank" rel="noopener noreferrer">
-            <img src="https://res.cloudinary.com/dpab7jsj3/image/upload/q_80,w_600/v1782805947/_DSC4137_cf3maq.jpg" alt="Scatto sportivo" loading="lazy" />
-          </a>
-          <a href="https://francescomarcucci-ph.pages.dev/" target="_blank" rel="noopener noreferrer">
-            <img src="https://res.cloudinary.com/dpab7jsj3/image/upload/w_1600,q_80/q_100/v1782805948/_DSC4352_lvnavn.jpg" alt="Scatto sportivo" loading="lazy" />
-          </a>
-          <a href="https://francescomarcucci-ph.pages.dev/" target="_blank" rel="noopener noreferrer">
-            <img src="https://res.cloudinary.com/dpab7jsj3/image/upload/q_80,w_600/v1783331062/portfolio/aueefzrurdbdqjwaw5dq.jpg" alt="Scatto sportivo" loading="lazy" />
-          </a>
-        </div>
-        <ul class="photo-highlights" aria-label="Aree di focus fotografico">
-          <li>
-            <i class="fa-solid fa-person-running" aria-hidden="true"></i>
-            <span>Eventi e gare</span>
-          </li>
-          <li>
-            <i class="fa-solid fa-bolt" aria-hidden="true"></i>
-            <span>Azione e timing</span>
-          </li>
-          <li>
-            <i class="fa-solid fa-camera" aria-hidden="true"></i>
-            <span>Storytelling visivo</span>
-          </li>
-        </ul>
-        <a class="btn btn-primary photo-cta" href="https://francescomarcucci-ph.pages.dev/" target="_blank" rel="noopener noreferrer">
-          Apri tutte le gallery <i class="fa-solid fa-arrow-up-right-from-square btn-icon" aria-hidden="true"></i>
+    <!-- GITHUB -->
+    <section class="container section reveal">
+      <p class="section-eyebrow">Open Source</p>
+      <h2 class="section-title-lg">GitHub Activity</h2>
+      <div class="github-grid">
+        <a class="github-repo" href="https://github.com/Marcu08/DevOS" target="_blank">
+          <div class="gh-header"><i class="fa-regular fa-folder"></i><span>DevOS</span></div>
+          <p class="gh-desc">Automation framework for dev environments</p>
+          <div class="gh-footer"><span class="gh-lang"><span class="lang-dot" style="background:#f1e05a"></span>JavaScript</span></div>
+        </a>
+        <a class="github-repo" href="https://github.com/Marcu08/LS-SOFFAS" target="_blank">
+          <div class="gh-header"><i class="fa-regular fa-folder"></i><span>LS-SOFFAS</span></div>
+          <p class="gh-desc">Data management web application</p>
+          <div class="gh-footer"><span class="gh-lang"><span class="lang-dot" style="background:#f1e05a"></span>JavaScript</span></div>
+        </a>
+        <a class="github-repo" href="https://github.com/Marcu08/Sito_Pratico_TPSIT_Film" target="_blank">
+          <div class="gh-header"><i class="fa-regular fa-folder"></i><span>TPSIT Film</span></div>
+          <p class="gh-desc">Film catalog web application</p>
+          <div class="gh-footer"><span class="gh-lang"><span class="lang-dot" style="background:#e34c26"></span>HTML</span></div>
         </a>
       </div>
+      <a class="btn btn-secondary btn-sm" href="https://github.com/Marcu08" target="_blank" style="margin-top:16px"><i class="fa-brands fa-github"></i> All repositories</a>
     </section>
 
+    <!-- ABOUT -->
+    <section id="about" class="container section reveal">
+      <p class="section-eyebrow">About</p>
+      <h2 class="section-title-lg">Developer by choice</h2>
+      <div class="about-content">
+        <p>Mi piace costruire software che elimina lavoro manuale e automatizza processi ripetitivi. Negli ultimi mesi mi sono concentrato su automazione, OCR e backend perché credo che la tecnologia debba risolvere problemi reali.</p>
+        <p>Ogni progetto parte da un bisogno concreto: analizzo il problema, progetto l'architettura, costruisco, rompo, miglioro. Uso <strong>PHP</strong>, <strong>Python</strong>, <strong>C++</strong>, <strong>SQL</strong>, <strong>Supabase</strong> — ma la vera competenza è sapere <em>quando</em> e <em>perché</em> usarli.</p>
+        <p>Studio ITIS, ma imparo molto di più costruendo. Questo portfolio, DevOS, il sistema OCR, il gestionale ferie — non sono esercizi. Sono strumenti che qualcuno usa davvero.</p>
+        <div class="about-quote">
+          <i class="fa-solid fa-quote-left"></i>
+          Non vendo quello che so. Vendo quello che so risolvere.
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
     <section id="contact" class="container section reveal">
-      <h2>Contatti</h2>
-      <p>
-        Se vuoi collaborare su un progetto web o hai bisogno di contenuti fotografici per eventi sportivi,
-        scrivimi: rispondo volentieri per valutare idee e obiettivi.
-      </p>
+      <p class="section-eyebrow">Contact</p>
+      <h2 class="section-title-lg">Let's talk</p>
       <div class="contact-grid">
-        <a class="contact-item" href="mailto:marcuccifrancesco0@gmail.com">
-          <i class="fa-solid fa-envelope" aria-hidden="true"></i>
-          <span>marcuccifrancesco0@gmail.com</span>
-        </a>
-        <a class="contact-item" href="https://github.com/Marcu08" target="_blank" rel="noopener noreferrer">
-          <i class="fa-brands fa-github" aria-hidden="true"></i>
-          <span>github.com/Marcu08</span>
-        </a>
+        <a class="contact-item" href="mailto:marcuccifrancesco0@gmail.com"><i class="fa-solid fa-envelope"></i><span>Email</span></a>
+        <a class="contact-item" href="https://github.com/Marcu08" target="_blank"><i class="fa-brands fa-github"></i><span>GitHub</span></a>
+        <a class="contact-item" href="https://www.linkedin.com/in/francesco-marcucci-b68919306/" target="_blank"><i class="fa-brands fa-linkedin"></i><span>LinkedIn</span></a>
       </div>
     </section>
+
   </main>
 
   <footer class="site-footer">
-    <p>© <span id="year"></span> Francesco Marcucci. Portfolio personale.</p>
+    <p>Designed &amp; Developed by Francesco Marcucci</p>
+    <p class="footer-muted">© <span id="year"></span></p>
   </footer>
 
   <script>
     const revealElements = document.querySelectorAll('.reveal');
     const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-
     if (!prefersReducedMotion) {
       const observer = new IntersectionObserver((entries) => {
         entries.forEach((entry) => {
@@ -299,34 +258,24 @@
             observer.unobserve(entry.target);
           }
         });
-      }, { threshold: 0.12 });
-
+      }, { threshold: 0.08 });
       revealElements.forEach((el) => observer.observe(el));
     } else {
       revealElements.forEach((el) => el.classList.add('is-visible'));
     }
-
     document.getElementById('year').textContent = new Date().getFullYear();
-
     const toggleBtn = document.getElementById('theme-toggle');
     const body = document.body;
     const sunIcon = '<i class="fa-solid fa-sun"></i>';
     const moonIcon = '<i class="fa-solid fa-moon"></i>';
-
     function applyTheme(isDark) {
       body.classList.toggle('dark-mode', isDark);
       toggleBtn.innerHTML = isDark ? sunIcon : moonIcon;
     }
-
     const savedTheme = localStorage.getItem('theme');
-    if (savedTheme === 'dark') {
-      applyTheme(true);
-    } else if (savedTheme === 'light') {
-      applyTheme(false);
-    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-      applyTheme(true);
-    }
-
+    if (savedTheme === 'dark') applyTheme(true);
+    else if (savedTheme === 'light') applyTheme(false);
+    else if (window.matchMedia('(prefers-color-scheme: dark)').matches) applyTheme(true);
     toggleBtn.addEventListener('click', () => {
       const isDark = !body.classList.contains('dark-mode');
       applyTheme(isDark);
