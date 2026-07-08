@@ -78,6 +78,10 @@ body.dark-mode .project-card {
     border-color: rgba(226, 232, 240, 0.1);
 }
 
+body.dark-mode .project-note {
+    color: #aaa;
+}
+
 body.dark-mode .photo-box {
     background: #1a2744;
     border-color: rgba(226, 232, 240, 0.2);
@@ -504,6 +508,16 @@ a {
     flex-wrap: wrap;
     gap: 6px;
     margin: 12px 0;
+}
+
+.project-note {
+    font-size: 0.85rem;
+    color: #888;
+    margin: 0 0 8px;
+}
+
+.project-note i {
+    margin-right: 4px;
 }
 
 .stack-tag {
