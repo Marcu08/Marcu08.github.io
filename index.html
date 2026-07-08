@@ -47,91 +47,42 @@
       </div>
     </section>
 
-    <!-- METRICS -->
-    <section class="metrics-bar container">
-      <div class="metric-item">
-        <span class="metric-val">~98%</span>
-        <span class="metric-lbl">OCR Accuracy</span>
-      </div>
-      <div class="metric-divider"></div>
-      <div class="metric-item">
-        <span class="metric-val">3</span>
-        <span class="metric-lbl">Real Clients</span>
-      </div>
-      <div class="metric-divider"></div>
-      <div class="metric-item">
-        <span class="metric-val">5</span>
-        <span class="metric-lbl">Apps Shipped</span>
-      </div>
-      <div class="metric-divider"></div>
-      <div class="metric-item">
-        <span class="metric-val">2</span>
-        <span class="metric-lbl">Years Coding</span>
-      </div>
-    </section>
-
-    <!-- DEVOS — GIANT -->
-    <section class="container section featured-section reveal" id="work">
-      <p class="section-eyebrow">Featured</p>
-      <h2 class="section-title-lg">DevOS</h2>
-      <div class="featured-image">
-        <img src="screenshot-devos.png" alt="DevOS" loading="lazy" onerror="this.style.display='none'" />
-        <div class="featured-image-fallback"><i class="fa-solid fa-terminal"></i></div>
-      </div>
-      <div class="devos-flow">
-        <div class="flow-step">
-          <span class="flow-label">Problem</span>
-          <p>Ogni volta che dovevo aggiornare un ambiente di sviluppo, facevo tutto a mano: patch, test, rollback se qualcosa andava storto. 30 minuti persi ogni volta.</p>
-        </div>
-        <div class="flow-arrow">→</div>
-        <div class="flow-step">
-          <span class="flow-label">Solution</span>
-          <p>Un agente Node.js che orchestra script PowerShell: applica patch, valida i risultati, e se qualcosa fallisce fa rollback automatico.</p>
-        </div>
-        <div class="flow-arrow">→</div>
-        <div class="flow-step">
-          <span class="flow-label">Result</span>
-          <p>Ora il setup che prima richiedeva mezz'ora si fa in pochi secondi, senza intervento manuale.</p>
-        </div>
-      </div>
-      <div class="featured-metric">
-        <span class="featured-metric-val">30 min</span>
-        <span class="featured-arrow">→</span>
-        <span class="featured-metric-val">2 sec</span>
-      </div>
-      <a class="btn btn-secondary" href="https://github.com/Marcu08/DevOS" target="_blank"><i class="fa-brands fa-github"></i> View on GitHub</a>
-    </section>
-
-    <!-- PROJECTS -->
-    <section class="container section reveal">
-      <p class="section-eyebrow">Projects</p>
+    <!-- WORK -->
+    <section class="container section reveal" id="work">
+      <p class="section-eyebrow">Work</p>
       <h2 class="section-title-lg">Problems I've solved</h2>
 
       <div class="projects-list">
 
-        <!-- OCR -->
+        <!-- DEVOS -->
         <article class="project-card project-card-lg">
           <div class="project-visual">
-            <div class="project-result-badge">~98% accuracy</div>
+            <img src="screenshot-devos.png" alt="DevOS" loading="lazy" onerror="this.style.display='none'" />
+            <div class="project-img-fallback"><i class="fa-solid fa-terminal"></i></div>
+          </div>
+          <div class="project-info">
+            <h3>DevOS</h3>
+            <p>Ogni volta che dovevo aggiornare un ambiente di sviluppo, facevo tutto a mano: patch, test, rollback. 30 minuti persi ogni volta. Ho costruito un agente Node.js che orchestra script PowerShell: applica patch, valida i risultati, e se qualcosa fallisce fa rollback automatico. Il setup che prima richiedeva mezz'ora si fa in pochi secondi.</p>
+            <a class="btn btn-secondary btn-sm" href="https://github.com/Marcu08/DevOS" target="_blank"><i class="fa-brands fa-github"></i> Code</a>
+          </div>
+        </article>
+
+        <!-- OCR -->
+        <article class="project-card">
+          <div class="project-visual">
             <img src="screenshot-ocr.png" alt="OCR Scanner" loading="lazy" onerror="this.style.display='none'" />
             <div class="project-img-fallback"><i class="fa-solid fa-file-image"></i></div>
           </div>
           <div class="project-info">
             <div class="project-context">Sviluppato durante il mio impiego presso Logistic Solution</div>
             <h3>OCR Scanner</h3>
-            <p>Inserire manualmente migliaia di dati da documenti cartacei era lento e soggetto a errori. Ho costruito una pipeline che preprocessa le immagini, riconosce il testo e valida i risultati automaticamente.</p>
-            <div class="project-metric">
-              <span class="pm-before">Inserimento manuale</span>
-              <span class="pm-arrow">→</span>
-              <span class="pm-after">Automazione ~98%</span>
-            </div>
+            <p>Inserire manualmente migliaia di dati da documenti cartacei era lento e soggetto a errori. Ho costruito una pipeline che preprocessa le immagini, riconosce il testo e valida i risultati automaticamente — con un tasso di accuratezza di circa il 98%.</p>
           </div>
         </article>
 
         <!-- LS-SOFFAS -->
         <article class="project-card">
           <div class="project-visual">
-            <div class="project-result-badge">PDF → Database</div>
             <img src="screenshot-ls-Soffass.png" alt="LS-SOFFAS" loading="lazy" />
           </div>
           <div class="project-info">
@@ -145,18 +96,12 @@
         <!-- SISTEMA FERIE -->
         <article class="project-card">
           <div class="project-visual">
-            <div class="project-result-badge">Excel → Web</div>
             <img src="screenshot-gestione-ferie.png" alt="Sistema Ferie" loading="lazy" onerror="this.style.display='none'" />
             <div class="project-img-fallback"><i class="fa-solid fa-calendar"></i></div>
           </div>
           <div class="project-info">
             <h3>Sistema Ferie</h3>
             <p>Le richieste ferie si facevano su Excel condiviso, con mille problemi di duplicati e conferme. L'ho trasformato in una piattaforma web con workflow di approvazione.</p>
-            <div class="project-metric">
-              <span class="pm-before">Excel</span>
-              <span class="pm-arrow">→</span>
-              <span class="pm-after">Piattaforma web</span>
-            </div>
           </div>
         </article>
 
@@ -189,36 +134,12 @@
       </div>
     </section>
 
-    <!-- GITHUB -->
-    <section class="container section reveal">
-      <p class="section-eyebrow">Open Source</p>
-      <h2 class="section-title-lg">GitHub Activity</h2>
-      <div class="github-grid">
-        <a class="github-repo" href="https://github.com/Marcu08/DevOS" target="_blank">
-          <div class="gh-header"><i class="fa-regular fa-folder"></i><span>DevOS</span></div>
-          <p class="gh-desc">Automation framework for dev environments</p>
-          <div class="gh-footer"><span class="gh-lang"><span class="lang-dot" style="background:#f1e05a"></span>JavaScript</span></div>
-        </a>
-        <a class="github-repo" href="https://github.com/Marcu08/LS-SOFFAS" target="_blank">
-          <div class="gh-header"><i class="fa-regular fa-folder"></i><span>LS-SOFFAS</span></div>
-          <p class="gh-desc">Data management web application</p>
-          <div class="gh-footer"><span class="gh-lang"><span class="lang-dot" style="background:#f1e05a"></span>JavaScript</span></div>
-        </a>
-        <a class="github-repo" href="https://github.com/Marcu08/Sito_Pratico_TPSIT_Film" target="_blank">
-          <div class="gh-header"><i class="fa-regular fa-folder"></i><span>TPSIT Film</span></div>
-          <p class="gh-desc">Film catalog web application</p>
-          <div class="gh-footer"><span class="gh-lang"><span class="lang-dot" style="background:#e34c26"></span>HTML</span></div>
-        </a>
-      </div>
-      <a class="btn btn-secondary btn-sm" href="https://github.com/Marcu08" target="_blank" style="margin-top:16px"><i class="fa-brands fa-github"></i> All repositories</a>
-    </section>
-
     <!-- ABOUT -->
     <section id="about" class="container section reveal">
       <p class="section-eyebrow">About</p>
       <h2 class="section-title-lg">Developer by choice</h2>
       <div class="about-content">
-        <p>Studio ITIS e lavoro come sviluppatore presso Logistic Solution, dove mi occupo di sviluppo web e automazione di processi aziendali. Ho costruito internamente l'OCR Scanner e LS-SOFFAS per digitalizzare i flussi di lavoro dell'azienda.</p>
+        <p>Studio ITIS e lavoro come sviluppatore presso Logistic Solution, dove mi occupo di sviluppo web e automazione di processi aziendali. Ho costruito internamente l'OCR Scanner e LS-SOFFAS per digitalizzare i flussi di lavoro dell'azienda. Nell'ultimo anno e mezzo ho lavorato su 5 applicazioni diverse.</p>
         <p>Faccio anche sviluppo web e social media management per Team Fabiana Luperini, una squadra ciclistica femminile giovanile.</p>
         <p>Nel tempo libero sviluppo DevOS, un tool di automazione per ambienti di sviluppo, e altri progetti open source. Mi piace costruire software che elimina lavoro manuale e automatizza processi ripetitivi.</p>
         <p>Uso <strong>PHP</strong>, <strong>Python</strong>, <strong>C++</strong>, <strong>SQL</strong>, <strong>Supabase</strong> — ma la vera competenza è sapere <em>quando</em> e <em>perché</em> usarli.</p>
