@@ -129,6 +129,8 @@ img { max-width: 100%; height: auto; display: block; }
 
 .project-card-lg { grid-template-columns: 280px 1fr; }
 .project-card-lg .project-visual { min-height: 220px; }
+.project-card-lg .project-visual img { max-height: 380px; object-fit: cover; }
+.project-card-lg h3 { font-size: 1.6rem; }
 
 .project-visual {
     position: relative; overflow: hidden; background: #eef2f7;
@@ -144,8 +146,9 @@ img { max-width: 100%; height: auto; display: block; }
 }
 
 .project-info { padding: 20px 24px; display: flex; flex-direction: column; justify-content: center; }
-.project-info h3 { margin: 0 0 6px; font-size: 1.15rem; }
+.project-info h3 { margin: 0 0 6px; font-size: 1.15rem; border-left: 3px solid var(--primary); padding-left: 12px; }
 .project-info > p { margin: 0 0 12px; font-size: 0.9rem; color: var(--muted); line-height: 1.5; flex: 1; }
+.project-info p strong { color: var(--primary); font-weight: 700; }
 
 .project-context {
     font-size: 0.72rem; font-weight: 600; text-transform: uppercase;
