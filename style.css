@@ -219,7 +219,6 @@ img { max-width: 100%; height: auto; display: block; }
     .project-card-lg .project-visual { min-height: 180px; }
     .project-info { padding: 14px; }
     .project-info h3 { font-size: 1.05rem; }
-    .contact-grid { grid-template-columns: 1fr; }
     .header-actions { gap: 8px; }
 }
 
