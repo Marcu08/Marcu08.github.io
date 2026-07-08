@@ -50,13 +50,8 @@
     <!-- METRICS -->
     <section class="metrics-bar container">
       <div class="metric-item">
-        <span class="metric-val">98%</span>
+        <span class="metric-val">~98%</span>
         <span class="metric-lbl">OCR Accuracy</span>
-      </div>
-      <div class="metric-divider"></div>
-      <div class="metric-item">
-        <span class="metric-val">30m → 2s</span>
-        <span class="metric-lbl">Dev Setup</span>
       </div>
       <div class="metric-divider"></div>
       <div class="metric-item">
@@ -67,6 +62,11 @@
       <div class="metric-item">
         <span class="metric-val">5</span>
         <span class="metric-lbl">Apps Shipped</span>
+      </div>
+      <div class="metric-divider"></div>
+      <div class="metric-item">
+        <span class="metric-val">2</span>
+        <span class="metric-lbl">Years Coding</span>
       </div>
     </section>
 
@@ -81,17 +81,17 @@
       <div class="devos-flow">
         <div class="flow-step">
           <span class="flow-label">Problem</span>
-          <p>Manual patching, rollback, environment setup — 30+ min, error-prone.</p>
+          <p>Ogni volta che dovevo aggiornare un ambiente di sviluppo, facevo tutto a mano: patch, test, rollback se qualcosa andava storto. 30 minuti persi ogni volta.</p>
         </div>
         <div class="flow-arrow">→</div>
         <div class="flow-step">
           <span class="flow-label">Solution</span>
-          <p>Node.js agent + PowerShell — orchestrates patches, validates, auto-rolls back.</p>
+          <p>Un agente Node.js che orchestra script PowerShell: applica patch, valida i risultati, e se qualcosa fallisce fa rollback automatico.</p>
         </div>
         <div class="flow-arrow">→</div>
         <div class="flow-step">
           <span class="flow-label">Result</span>
-          <p>30 min → 2 seconds. Zero manual intervention. Resilient.</p>
+          <p>Ora il setup che prima richiedeva mezz'ora si fa in pochi secondi, senza intervento manuale.</p>
         </div>
       </div>
       <div class="featured-metric">
@@ -109,38 +109,21 @@
 
       <div class="projects-list">
 
-        <!-- OCR — BIG -->
+        <!-- OCR -->
         <article class="project-card project-card-lg">
           <div class="project-visual">
-            <div class="project-result-badge">98% accuracy</div>
+            <div class="project-result-badge">~98% accuracy</div>
             <img src="screenshot-ocr.png" alt="OCR Scanner" loading="lazy" onerror="this.style.display='none'" />
             <div class="project-img-fallback"><i class="fa-solid fa-file-image"></i></div>
           </div>
           <div class="project-info">
+            <div class="project-context">Sviluppato durante il mio impiego presso Logistic Solution</div>
             <h3>OCR Scanner</h3>
-            <p>Manual data entry from paper documents → automated pipeline: image preprocessing, OCR recognition, validation.</p>
+            <p>Inserire manualmente migliaia di dati da documenti cartacei era lento e soggetto a errori. Ho costruito una pipeline che preprocessa le immagini, riconosce il testo e valida i risultati automaticamente.</p>
             <div class="project-metric">
-              <span class="pm-before">Manual entry</span>
+              <span class="pm-before">Inserimento manuale</span>
               <span class="pm-arrow">→</span>
-              <span class="pm-after">98% automated</span>
-            </div>
-          </div>
-        </article>
-
-        <!-- SISTEMA FERIE -->
-        <article class="project-card">
-          <div class="project-visual">
-            <div class="project-result-badge">Excel → Platform</div>
-            <img src="screenshot-gestione-ferie.png" alt="Sistema Ferie" loading="lazy" onerror="this.style.display='none'" />
-            <div class="project-img-fallback"><i class="fa-solid fa-calendar"></i></div>
-          </div>
-          <div class="project-info">
-            <h3>Sistema Ferie</h3>
-            <p>Shared Excel sheets for leave management → web platform with approval workflow.</p>
-            <div class="project-metric">
-              <span class="pm-before">Excel chaos</span>
-              <span class="pm-arrow">→</span>
-              <span class="pm-after">Centralized system</span>
+              <span class="pm-after">Automazione ~98%</span>
             </div>
           </div>
         </article>
@@ -149,17 +132,31 @@
         <article class="project-card">
           <div class="project-visual">
             <div class="project-result-badge">PDF → Database</div>
-            <img src="screenshot-ls-Soffass.png" alt="LS-SOFFAS" loading="lazy" />
+            <img src="screenshot-ls.png" alt="LS-SOFFAS" loading="lazy" />
           </div>
           <div class="project-info">
+            <div class="project-context">Sviluppato durante il mio impiego presso Logistic Solution</div>
             <h3>LS-SOFFAS</h3>
-            <p>Unstructured data from PDF uploads → structured database with queries and reports.</p>
-            <div class="project-metric">
-              <span class="pm-before">PDF uploads</span>
-              <span class="pm-arrow">→</span>
-              <span class="pm-after">Queryable DB</span>
-            </div>
+            <p>I documenti arrivavano come PDF senza struttura. Ho creato un sistema che estrae i dati, li organizza in un database e genera report automatici.</p>
             <a class="btn btn-secondary btn-sm" href="https://github.com/Marcu08/LS-SOFFAS" target="_blank"><i class="fa-brands fa-github"></i> Code</a>
+          </div>
+        </article>
+
+        <!-- SISTEMA FERIE -->
+        <article class="project-card">
+          <div class="project-visual">
+            <div class="project-result-badge">Excel → Web</div>
+            <img src="screenshot-gestione-ferie.png" alt="Sistema Ferie" loading="lazy" onerror="this.style.display='none'" />
+            <div class="project-img-fallback"><i class="fa-solid fa-calendar"></i></div>
+          </div>
+          <div class="project-info">
+            <h3>Sistema Ferie</h3>
+            <p>Le richieste ferie si facevano su Excel condiviso, con mille problemi di duplicati e conferme. L'ho trasformato in una piattaforma web con workflow di approvazione.</p>
+            <div class="project-metric">
+              <span class="pm-before">Excel</span>
+              <span class="pm-arrow">→</span>
+              <span class="pm-after">Piattaforma web</span>
+            </div>
           </div>
         </article>
 
@@ -169,8 +166,9 @@
             <img src="screenshot-tfl.png" alt="Team Fabiana Luperini" loading="lazy" />
           </div>
           <div class="project-info">
+            <div class="project-context">Sviluppo web e social media management</div>
             <h3>Team Fabiana Luperini</h3>
-            <p>Professional website for a women's cycling team. Structured content, clean design.</p>
+            <p>Sito web professionale per una squadra ciclistica femminile. Gestione contenuti sportivi, presentazione squadra e risultati.</p>
             <a class="btn btn-secondary btn-sm" href="https://www.teamfabianaluperini.it" target="_blank">Visit <i class="fa-solid fa-arrow-right"></i></a>
           </div>
         </article>
@@ -181,8 +179,9 @@
             <img src="screenshot-ls.png" alt="Logistic Solution" loading="lazy" />
           </div>
           <div class="project-info">
+            <div class="project-context">Lavoro presso Logistic Solution</div>
             <h3>Logistic Solution</h3>
-            <p>Outdated B2B website → modern redesign to attract new clients.</p>
+            <p>Il sito B2B dell'azienda era datato e non comunicava professionalità. L'ho rifatto da zero per dare una prima impressione più forte ai potenziali clienti.</p>
             <a class="btn btn-secondary btn-sm" href="https://www.logisticsolution.net" target="_blank">Visit <i class="fa-solid fa-arrow-right"></i></a>
           </div>
         </article>
@@ -219,9 +218,10 @@
       <p class="section-eyebrow">About</p>
       <h2 class="section-title-lg">Developer by choice</h2>
       <div class="about-content">
-        <p>Mi piace costruire software che elimina lavoro manuale e automatizza processi ripetitivi. Negli ultimi mesi mi sono concentrato su automazione, OCR e backend perché credo che la tecnologia debba risolvere problemi reali.</p>
-        <p>Ogni progetto parte da un bisogno concreto: analizzo il problema, progetto l'architettura, costruisco, rompo, miglioro. Uso <strong>PHP</strong>, <strong>Python</strong>, <strong>C++</strong>, <strong>SQL</strong>, <strong>Supabase</strong> — ma la vera competenza è sapere <em>quando</em> e <em>perché</em> usarli.</p>
-        <p>Studio ITIS, ma imparo molto di più costruendo. Questo portfolio, DevOS, il sistema OCR, il gestionale ferie — non sono esercizi. Sono strumenti che qualcuno usa davvero.</p>
+        <p>Studio ITIS e lavoro come sviluppatore presso Logistic Solution, dove mi occupo di sviluppo web e automazione di processi aziendali. Ho costruito internamente l'OCR Scanner e LS-SOFFAS per digitalizzare i flussi di lavoro dell'azienda.</p>
+        <p>Faccio anche sviluppo web e social media management per Team Fabiana Luperini, una squadra ciclistica femminile professionistica.</p>
+        <p>Nel tempo libero sviluppo DevOS, un tool di automazione per ambienti di sviluppo, e altri progetti open source. Mi piace costruire software che elimina lavoro manuale e automatizza processi ripetitivi.</p>
+        <p>Uso <strong>PHP</strong>, <strong>Python</strong>, <strong>C++</strong>, <strong>SQL</strong>, <strong>Supabase</strong> — ma la vera competenza è sapere <em>quando</em> e <em>perché</em> usarli.</p>
         <div class="about-quote">
           <i class="fa-solid fa-quote-left"></i>
           Non vendo quello che so. Vendo quello che so risolvere.
@@ -232,7 +232,7 @@
     <!-- CONTACT -->
     <section id="contact" class="container section reveal">
       <p class="section-eyebrow">Contact</p>
-      <h2 class="section-title-lg">Let's talk</p>
+      <h2 class="section-title-lg">Let's talk</h2>
       <div class="contact-grid">
         <a class="contact-item" href="mailto:marcuccifrancesco0@gmail.com"><i class="fa-solid fa-envelope"></i><span>Email</span></a>
         <a class="contact-item" href="https://github.com/Marcu08" target="_blank"><i class="fa-brands fa-github"></i><span>GitHub</span></a>

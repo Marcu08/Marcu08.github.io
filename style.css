@@ -231,6 +231,12 @@ img { max-width: 100%; height: auto; display: block; }
 .project-info h3 { margin: 0 0 6px; font-size: 1.15rem; }
 .project-info > p { margin: 0 0 12px; font-size: 0.9rem; color: var(--muted); line-height: 1.5; flex: 1; }
 
+.project-context {
+    font-size: 0.72rem; font-weight: 600; text-transform: uppercase;
+    letter-spacing: 0.06em; color: var(--primary); margin-bottom: 6px;
+    opacity: 0.8;
+}
+
 .project-metric { display: flex; align-items: center; gap: 8px; font-size: 0.82rem; font-weight: 600; }
 .pm-before { color: var(--muted); text-decoration: line-through; opacity: 0.7; }
 .pm-after { color: #16a34a; }
