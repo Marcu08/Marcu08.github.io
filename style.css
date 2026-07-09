@@ -60,6 +60,7 @@ body {
 h1, h2, h3, .logo, .btn { font-family: var(--font-display); }
 a { color: inherit; }
 img { max-width: 100%; height: auto; display: block; }
+.icon { width: 1em; height: 1em; vertical-align: -0.125em; fill: currentColor; }
 
 .bg-shape { position: fixed; border-radius: 50%; filter: blur(100px); z-index: -1; opacity: 0.15; }
 .bg-shape-1 { width: 400px; height: 400px; background: #8eb6ff; top: 2%; left: -140px; }
