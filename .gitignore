@@ -13,6 +13,10 @@ Desktop.ini
 # Dev/debug screenshots
 check-*.png
 
-# Screenshot orfani (sostituiti da video)
+# Screenshot PNG sostituiti da WebP
 screenshot-devos.png
 screenshot-ocr.png
+screenshot-ls-Soffass.png
+screenshot-gestione-ferie.png
+screenshot-tfl.png
+screenshot-ls.png
