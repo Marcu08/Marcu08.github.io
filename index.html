@@ -10,6 +10,9 @@
   <meta property="og:image" content="https://marcu08.github.io/Logo.png" />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://marcu08.github.io" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Francesco Marcucci | Developer & Automation Systems" />
+  <meta name="twitter:description" content="Developer specializzato in automazione, OCR e sistemi backend. Portfolio di Francesco Marcucci." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -32,7 +35,7 @@
     <div class="header-actions">
       <a class="header-link" href="https://github.com/Marcu08" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i></a>
       <a class="header-link" href="https://www.linkedin.com/in/francesco-marcucci-b68919306/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin"></i></a>
-      <button id="theme-toggle" aria-label="Toggle theme"><i class="fa-solid fa-moon"></i></button>
+      <button id="theme-toggle" aria-label="Cambia tema chiaro/scuro"><i class="fa-solid fa-moon"></i></button>
     </div>
   </header>
 
@@ -43,8 +46,8 @@
       <div class="hero-inner">
         <p class="hero-badge"><span class="hero-badge-dot"></span> Building <strong>DevOS</strong></p>
         <h1 class="hero-title">Francesco Marcucci</h1>
-        <p class="hero-sub">I build software that eliminates manual work.</p>
-        <p class="hero-desc">Automation · OCR · Backend Systems</p>
+        <p class="hero-sub">Costruisco software che elimina il lavoro manuale.</p>
+        <p class="hero-desc">Automazione · OCR · Sistemi backend</p>
         <div class="hero-actions">
           <a class="btn btn-primary" href="#work">See my work <i class="fa-solid fa-arrow-down"></i></a>
           <a class="btn btn-secondary" href="https://github.com/Marcu08" target="_blank"><i class="fa-brands fa-github"></i> GitHub</a>
@@ -62,47 +65,54 @@
         <!-- DEVOS -->
         <article class="project-card project-card-lg">
           <div class="project-visual">
-            <img src="screenshot-devos.png" alt="DevOS" loading="lazy" onerror="this.style.display='none'" />
+            <video autoplay muted loop playsinline disablepictureinpicture>
+              <source src="assets/devos-preview.webm" type="video/webm">
+            </video>
+            <img src="screenshot-devos.png" alt="Screenshot dell'interfaccia DevOS" loading="lazy" onerror="this.style.display='none'" />
             <div class="project-img-fallback"><i class="fa-solid fa-terminal"></i></div>
           </div>
           <div class="project-info">
             <h3>DevOS</h3>
             <p>Ogni volta che dovevo aggiornare un ambiente di sviluppo, facevo tutto a mano: patch, test, rollback. <strong>30 minuti</strong> persi ogni volta. Ho costruito un agente Node.js che orchestra script PowerShell: applica patch, valida i risultati, e se qualcosa fallisce fa rollback automatico. Il setup che prima richiedeva mezz'ora si fa in <strong>pochi secondi</strong>.</p>
             <div class="about-quote">Il setup che prima richiedeva mezz'ora ora si fa in pochi secondi.</div>
-            <a class="btn btn-secondary btn-sm" href="https://github.com/Marcu08/DevOS" target="_blank"><i class="fa-brands fa-github"></i> Code</a>
+            <a class="btn btn-secondary btn-sm" href="https://github.com/Marcu08/DevOS" target="_blank" aria-label="Vedi il codice di DevOS su GitHub"><i class="fa-brands fa-github"></i> Code</a>
           </div>
         </article>
 
         <!-- OCR -->
         <article class="project-card">
           <div class="project-visual">
-            <img src="screenshot-ocr.png" alt="OCR Scanner" loading="lazy" onerror="this.style.display='none'" />
+            <video autoplay muted loop playsinline disablepictureinpicture>
+              <source src="assets/ocr-preview.webm" type="video/webm">
+            </video>
+            <img src="screenshot-ocr.png" alt="Screenshot dell'interfaccia OCR Scanner" loading="lazy" onerror="this.style.display='none'" />
             <div class="project-img-fallback"><i class="fa-solid fa-file-image"></i></div>
           </div>
           <div class="project-info">
-            <div class="project-context">Sviluppato durante il mio impiego presso Logistic Solution</div>
+            <div class="project-context">Componente del progetto LS-SOFFAS</div>
             <h3>OCR Scanner</h3>
             <p>Inserire manualmente migliaia di dati da documenti cartacei era lento e soggetto a errori. Ho costruito una pipeline che preprocessa le immagini, riconosce il testo e valida i risultati automaticamente — con un tasso di accuratezza di circa il <strong>98%</strong>.</p>
+            <a class="btn btn-secondary btn-sm" href="https://github.com/Marcu08/LS-SOFFAS" target="_blank" aria-label="Vedi il codice di OCR Scanner su GitHub"><i class="fa-brands fa-github"></i> Code</a>
           </div>
         </article>
 
         <!-- LS-SOFFAS -->
         <article class="project-card">
           <div class="project-visual">
-            <img src="screenshot-ls-Soffass.png" alt="LS-SOFFAS" loading="lazy" />
+            <img src="screenshot-ls-Soffass.png" alt="Screenshot dell'interfaccia LS-SOFFAS" loading="lazy" />
           </div>
           <div class="project-info">
             <div class="project-context">Sviluppato durante il mio impiego presso Logistic Solution</div>
             <h3>LS-SOFFAS</h3>
             <p>I documenti arrivavano come PDF senza struttura. Ho creato un sistema che estrae i dati, li organizza in un database e genera report automatici.</p>
-            <a class="btn btn-secondary btn-sm" href="https://github.com/Marcu08/LS-SOFFAS" target="_blank"><i class="fa-brands fa-github"></i> Code</a>
+            <a class="btn btn-secondary btn-sm" href="https://github.com/Marcu08/LS-SOFFAS" target="_blank" aria-label="Vedi il codice di LS-SOFFAS su GitHub"><i class="fa-brands fa-github"></i> Code</a>
           </div>
         </article>
 
         <!-- SISTEMA FERIE -->
         <article class="project-card">
           <div class="project-visual">
-            <img src="screenshot-gestione-ferie.png" alt="Sistema Ferie" loading="lazy" onerror="this.style.display='none'" />
+            <img src="screenshot-gestione-ferie.png" alt="Screenshot dell'interfaccia Sistema Ferie" loading="lazy" onerror="this.style.display='none'" />
             <div class="project-img-fallback"><i class="fa-solid fa-calendar"></i></div>
           </div>
           <div class="project-info">
@@ -114,26 +124,26 @@
         <!-- TFL -->
         <article class="project-card">
           <div class="project-visual">
-            <img src="screenshot-tfl.png" alt="Team Fabiana Luperini" loading="lazy" />
+            <img src="screenshot-tfl.png" alt="Screenshot del sito Team Fabiana Luperini" loading="lazy" />
           </div>
           <div class="project-info">
             <div class="project-context">Sviluppo web e social media management</div>
             <h3>Team Fabiana Luperini</h3>
             <p>Sito web professionale per una squadra ciclistica femminile. Gestione contenuti sportivi, presentazione squadra e risultati.</p>
-            <a class="btn btn-secondary btn-sm" href="https://www.teamfabianaluperini.it" target="_blank">Visit <i class="fa-solid fa-arrow-right"></i></a>
+            <a class="btn btn-secondary btn-sm" href="https://www.teamfabianaluperini.it" target="_blank" aria-label="Visita il sito Team Fabiana Luperini">Visit <i class="fa-solid fa-arrow-right"></i></a>
           </div>
         </article>
 
         <!-- LOGISTIC -->
         <article class="project-card">
           <div class="project-visual">
-            <img src="screenshot-ls.png" alt="Logistic Solution" loading="lazy" />
+            <img src="screenshot-ls.png" alt="Screenshot del sito Logistic Solution" loading="lazy" />
           </div>
           <div class="project-info">
             <div class="project-context">Lavoro presso Logistic Solution</div>
             <h3>Logistic Solution</h3>
             <p>Il sito B2B dell'azienda era datato e non comunicava professionalità. L'ho rifatto da zero per dare una prima impressione più forte ai potenziali clienti.</p>
-            <a class="btn btn-secondary btn-sm" href="https://www.logisticsolution.net" target="_blank">Visit <i class="fa-solid fa-arrow-right"></i></a>
+            <a class="btn btn-secondary btn-sm" href="https://www.logisticsolution.net" target="_blank" aria-label="Visita il sito Logistic Solution">Visit <i class="fa-solid fa-arrow-right"></i></a>
           </div>
         </article>
 
