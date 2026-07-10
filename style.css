@@ -231,6 +231,62 @@ img { max-width: 100%; height: auto; display: block; }
     display: flex; gap: 12px; align-items: center;
 }
 
+/* DEVOS TECH SECTION */
+.devos-tech {
+    display: flex;
+    gap: 14px;
+    padding: 20px 22px;
+    border-top: 1px solid var(--line);
+}
+.devos-tech-block {
+    flex: 1;
+}
+.devos-tech-title {
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--primary);
+    margin: 0 0 10px;
+    font-family: var(--font-display);
+}
+.arch-flow {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+}
+.arch-node {
+    font-size: 0.83rem;
+    font-weight: 600;
+    padding: 6px 18px;
+    border: 1px solid var(--line);
+    border-radius: var(--radius-sm);
+    background: var(--surface);
+    font-family: var(--font-display);
+}
+.arch-arrow {
+    color: var(--muted);
+    font-size: 0.85rem;
+    line-height: 1;
+}
+.caps-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+.caps-list li {
+    font-size: 0.83rem;
+    color: var(--muted);
+    padding: 6px 14px;
+    border: 1px solid var(--line);
+    border-radius: var(--radius-sm);
+    background: var(--surface);
+}
+
 /* FEATURED PROJECTS */
 .featured-grid { display: grid; gap: 28px; margin-top: 20px; }
 .featured-card {
@@ -405,6 +461,7 @@ img { max-width: 100%; height: auto; display: block; }
     .wms-card:last-child { border-bottom: none; }
     .wms-gallery { flex-direction: column; gap: 4px; }
     .wms-gallery-item { flex: none; }
+    .devos-tech { flex-direction: column; gap: 18px; }
     .featured-info { padding: 18px; }
     .featured-title { font-size: 1.2rem; }
     .featured-subtitle { font-size: 0.82rem; padding-left: 14px; }
