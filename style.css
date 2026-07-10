@@ -145,23 +145,24 @@ img { max-width: 100%; height: auto; display: block; }
 .focus-grid-center { display: flex; justify-content: center; gap: 12px; margin-top: 12px; }
 .focus-grid-center .focus-item { width: calc((100% - 24px) / 3); flex-shrink: 0; }
 .focus-item {
-    display: flex; align-items: flex-start; gap: 16px;
-    padding: 22px 24px;
+    display: flex; flex-direction: column; align-items: center; gap: 12px;
+    padding: 28px 22px;
     border: 1px solid var(--line); border-radius: var(--radius-md);
     background: var(--surface);
     box-shadow: var(--shadow-sm);
+    text-align: center;
     transition: border-color 0.2s, box-shadow 0.2s;
 }
 .focus-item:hover { border-color: #c8d4ef; box-shadow: 0 4px 12px rgba(0,0,0,0.04); }
 .focus-icon {
-    flex-shrink: 0; width: 44px; height: 44px; border-radius: 10px;
+    flex-shrink: 0; width: 52px; height: 52px; border-radius: 12px;
     background: #e7f0ff; color: var(--primary);
     display: flex; align-items: center; justify-content: center;
-    font-size: 1.2rem;
+    font-size: 1.35rem;
 }
-.focus-item > div { flex: 1; }
+.focus-item > div { flex: none; }
 .focus-item h3 { margin: 0 0 4px; font-size: 0.95rem; }
-.focus-item p { margin: 0; font-size: 0.83rem; color: var(--muted); line-height: 1.45; }
+.focus-item p { margin: 0; font-size: 0.83rem; color: var(--muted); line-height: 1.45; max-width: 28ch; }
 
 .focus-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-top: 20px; }
 .focus-card { border: 1px solid var(--line); border-radius: var(--radius-md); padding: 24px 22px; background: var(--surface); box-shadow: var(--shadow-sm); transition: transform 0.25s ease, border-color 0.25s; display: flex; flex-direction: column; align-items: flex-start; gap: 8px; }
