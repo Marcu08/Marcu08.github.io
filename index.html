@@ -3,17 +3,17 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Francesco Marcucci is a Junior Software Engineer and Computer Science student passionate about automation, web applications and real-world software projects." />
+  <meta name="description" content="Computer Science student building practical software projects with JavaScript, web technologies and modern development workflows." />
   <title>Francesco Marcucci | Junior Software Engineer</title>
   <meta property="og:title" content="Francesco Marcucci | Junior Software Engineer" />
-  <meta property="og:description" content="Francesco Marcucci is a Junior Software Engineer and Computer Science student passionate about automation, web applications and real-world software projects." />
+  <meta property="og:description" content="Computer Science student building practical software projects with JavaScript, web technologies and modern development workflows." />
   <meta property="og:image" content="https://marcu08.github.io/og-image.png" />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://marcu08.github.io" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:image" content="https://marcu08.github.io/og-image.png" />
   <meta name="twitter:title" content="Francesco Marcucci | Junior Software Engineer" />
-  <meta name="twitter:description" content="Francesco Marcucci is a Junior Software Engineer and Computer Science student passionate about automation, web applications and real-world software projects." />
+  <meta name="twitter:description" content="Computer Science student building practical software projects with JavaScript, web technologies and modern development workflows." />
   <meta name="keywords" content="software developer, automation developer, web applications, business software, workflow automation, OCR systems, full stack development">
   <link rel="canonical" href="https://marcu08.github.io/" />
   <script type="application/ld+json">
@@ -167,14 +167,27 @@
       </div>
     </section>
 
-    <!-- 3. FEATURED PROJECTS -->
+    <!-- 4. FEATURED PROJECTS -->
     <section class="container section reveal" id="work">
       <p class="section-eyebrow">Featured projects</p>
       <h2 class="section-title-lg">Case studies</h2>
       <div class="projects-list">
         <article class="project-card">
+          <div class="project-visual" style="background:#101520">
+            <video autoplay muted loop playsinline preload="metadata" disablepictureinpicture aria-hidden="true" style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;z-index:2">
+              <source src="assets/ocr-preview.webm" type="video/webm">
+            </video>
+          </div>
+          <div class="project-info">
+            <div class="project-context">OCR &middot; Document Processing</div>
+            <h3>OCR Scanner</h3>
+            <p>Document scanning system that extracts structured data from supplier documents using OCR, with confidence-based validation and automatic database population.</p>
+            <button class="btn btn-primary btn-sm" onclick="openModal('wms')">View Case Study</button>
+          </div>
+        </article>
+        <article class="project-card">
           <div class="project-visual">
-            <img src="assets/wms/wms-dashboard.webp" alt="WMS dashboard" loading="lazy" />
+            <img src="assets/wms/wms-ocr.webp" alt="WMS OCR document scanning interface" loading="lazy" />
           </div>
           <div class="project-info">
             <div class="project-context">PWA &middot; React &middot; Supabase</div>
@@ -203,7 +216,7 @@
       </div>
     </section>
 
-    <!-- 4. CLIENT PROJECTS -->
+    <!-- 5. CLIENT PROJECTS -->
     <section class="container section reveal">
       <p class="section-eyebrow">Production projects</p>
       <h2 class="section-title-lg">Real client projects</h2>
@@ -222,25 +235,10 @@
             </div>
           </div>
         </article>
-
-        <article class="project-card">
-          <div class="project-visual">
-            <img src="screenshot-ls.webp" alt="Screenshot Logistic Solution" loading="lazy" />
-          </div>
-          <div class="project-info">
-            <div class="project-context">Presso Logistic Solution</div>
-            <h3>Logistic Solution</h3>
-            <p>B2B website redesign to improve communication, showcase services and enhance user experience.</p>
-            <div style="display:flex;gap:8px;flex-wrap:wrap">
-              <button class="btn btn-primary btn-sm" onclick="openModal('logistic')">View Case Study</button>
-              <a class="btn btn-secondary btn-sm" href="https://www.logisticsolution.net" target="_blank" rel="noopener noreferrer">Visit <svg class="icon"><use href="#icon-arrow-right"></use></svg></a>
-            </div>
-          </div>
-        </article>
       </div>
     </section>
 
-    <!-- 5. OTHER PROJECTS -->
+    <!-- 6. OTHER PROJECTS -->
     <section class="container section reveal">
       <p class="section-eyebrow">Additional projects</p>
       <h2 class="section-title-lg">Other projects</h2>
@@ -307,7 +305,7 @@
       </div>
     </section>
 
-    <!-- 6. ABOUT -->
+    <!-- 8. ABOUT -->
     <section class="container section reveal" id="about">
       <p class="section-eyebrow">Approach</p>
       <h2 class="section-title-lg">How I work</h2>
@@ -322,7 +320,7 @@
       </div>
     </section>
 
-    <!-- 7. CONTACT -->
+    <!-- 9. CONTACT -->
     <section class="container section reveal" id="contact">
       <p class="section-eyebrow">Contact</p>
       <h2 class="section-title-lg">Let's discuss your project</h2>
@@ -351,7 +349,7 @@
       <span><svg class="icon"><use href="#icon-database"></use></svg> Supabase</span>
       <span><svg class="icon"><use href="#icon-file-image"></use></svg> Tesseract OCR</span>
     </div>
-    <div class="modal-visual"><img src="assets/wms/wms-dashboard.webp" alt="WMS dashboard" /></div>
+    <div class="modal-visual"><img src="assets/wms/wms-ocr.webp" alt="WMS OCR document scanning and data extraction interface" /></div>
 
     <div class="modal-section">
       <h3>Project Overview</h3>
@@ -411,6 +409,10 @@
         <span>Type: PWA Application</span>
         <span>Status: Production</span>
         <span>Platform: Web / Mobile</span>
+      </div>
+      <div class="modal-meta" style="margin-top:2px">
+        <span>Role: Solo Developer</span>
+        <span>Deployment: Production Prototype</span>
       </div>
     </div>
   </div>
@@ -483,6 +485,11 @@
         <span>License: Open Source</span>
         <a class="header-link" href="https://github.com/Marcu08/DevOS" target="_blank" rel="noopener noreferrer" style="font-size:0.82rem"><svg class="icon"><use href="#icon-github"></use></svg> Repository</a>
       </div>
+      <div class="modal-meta" style="margin-top:2px">
+        <span>Version: v1.1.0</span>
+        <span>Role: Solo Developer</span>
+        <span>Deployment: GitHub Pages</span>
+      </div>
     </div>
   </div>
 
@@ -553,77 +560,6 @@
         <span>Type: CMS Website</span>
         <span>Status: Live</span>
         <a href="https://www.teamfabianaluperini.it" target="_blank" rel="noopener noreferrer" style="font-size:0.82rem;color:var(--primary);font-weight:600">Visit site &rarr;</a>
-      </div>
-    </div>
-  </div>
-
-  <!-- MODAL CONTENT: LOGISTIC SOLUTION -->
-  <div id="modal-logistic" hidden>
-    <button class="modal-close" onclick="closeModal()" aria-label="Close">&times;</button>
-    <p class="modal-eyebrow">Client project</p>
-    <h2>Logistic Solution</h2>
-    <div class="modal-meta">
-      <span><svg class="icon"><use href="#icon-code"></use></svg> B2B Website</span>
-      <span><svg class="icon"><use href="#icon-lightbulb"></use></svg> Redesign</span>
-    </div>
-    <div class="modal-visual"><img src="screenshot-ls.webp" alt="Logistic Solution website screenshot" /></div>
-
-    <div class="modal-section">
-      <h3>Project Overview</h3>
-      <p>A complete redesign of the corporate website for Logistic Solution, a logistics and transportation company. The project modernized the company's online presence to better communicate its services and value proposition to B2B clients.</p>
-    </div>
-
-    <div class="modal-section">
-      <h3>The Problem</h3>
-      <p>The existing website was outdated: poor visual hierarchy, non-functional contact forms and a layout that didn't work on mobile devices. Potential clients visiting the site couldn't easily understand the company's services or get in touch. The site was also hard for the company to update.</p>
-    </div>
-
-    <div class="modal-section">
-      <h3>My Solution</h3>
-      <p>I redesigned the site with a clear information architecture that guides visitors from understanding the company's services to contacting the sales team. The design uses the company's brand colors with improved typography and spacing. Contact forms were rebuilt with validation and email notifications. The backend allows staff to update service descriptions and company information.</p>
-    </div>
-
-    <div class="modal-section">
-      <h3>Technical Highlights</h3>
-      <ul>
-        <li><strong>B2B UX design</strong> — Information architecture optimized for business visitors evaluating a logistics partner.</li>
-        <li><strong>Contact form with validation</strong> — Client-side and server-side validation with email notifications to the sales team.</li>
-        <li><strong>Responsive redesign</strong> — Full mobile adaptation from a previously desktop-only layout.</li>
-        <li><strong>CMS backend</strong> — Admin panel for updating content without technical support.</li>
-      </ul>
-    </div>
-
-    <div class="modal-section">
-      <h3>Challenges</h3>
-      <p>Working with the existing brand identity while modernizing the look was a challenge. The company wanted a fresh design but needed to maintain brand recognition. I solved this by keeping the color palette and logo but completely reworking typography, spacing and layout. The contact form also needed careful spam protection while remaining user-friendly.</p>
-    </div>
-
-    <div class="modal-section">
-      <h3>Lessons Learned</h3>
-      <ul>
-        <li>B2B websites need different UX patterns than B2C — clarity and trust signals matter more than flashy design.</li>
-        <li>Form usability directly impacts lead generation — every extra field reduces conversion.</li>
-        <li>Client education about content management reduces ongoing maintenance requests.</li>
-      </ul>
-    </div>
-
-    <div class="modal-section">
-      <h3>Technologies</h3>
-      <div class="modal-tags">
-        <span class="cs-badge">PHP</span>
-        <span class="cs-badge">MySQL</span>
-        <span class="cs-badge">JavaScript</span>
-        <span class="cs-badge">Responsive CSS</span>
-        <span class="cs-badge">HTML</span>
-      </div>
-    </div>
-
-    <div class="modal-section">
-      <h3>Project Info</h3>
-      <div class="modal-meta">
-        <span>Type: Corporate Website</span>
-        <span>Status: Live</span>
-        <a href="https://www.logisticsolution.net" target="_blank" rel="noopener noreferrer" style="font-size:0.82rem;color:var(--primary);font-weight:600">Visit site &rarr;</a>
       </div>
     </div>
   </div>
