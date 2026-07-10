@@ -142,7 +142,8 @@ img { max-width: 100%; height: auto; display: block; }
 
 /* ENGINEERING FOCUS */
 .focus-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 20px; }
-.focus-grid-center { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; margin-top: 12px; width: fit-content; margin-left: auto; margin-right: auto; }
+.focus-grid-center { display: flex; justify-content: center; gap: 12px; margin-top: 12px; }
+.focus-grid-center .focus-item { width: calc((100% - 24px) / 3); flex-shrink: 0; }
 .focus-item {
     display: flex; align-items: flex-start; gap: 14px;
     padding: 18px 20px;
@@ -310,7 +311,8 @@ body.modal-open { overflow: hidden; }
 /* RESPONSIVE */
 @media (max-width: 900px) {
     .focus-grid { grid-template-columns: 1fr; }
-    .focus-grid-center { grid-template-columns: 1fr; width: 100%; }
+    .focus-grid-center { flex-direction: column; align-items: stretch; }
+    .focus-grid-center .focus-item { width: 100%; }
     .focus-cards { grid-template-columns: 1fr; }
     .method-steps { grid-template-columns: repeat(2, 1fr); }
 }
