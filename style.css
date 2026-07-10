@@ -47,9 +47,6 @@ body.dark-mode .wms-gallery-item { background: #080e1a; }
 body.dark-mode .focus-item { background: rgba(20,31,58,0.55); border-color: rgba(226,232,240,0.06); }
 body.dark-mode .focus-item:hover { border-color: rgba(59,130,246,0.18); }
 body.dark-mode .focus-icon { background: rgba(59,130,246,0.1); color: var(--primary); }
-body.dark-mode .featured-card { background: rgba(20,31,58,0.55); border-color: rgba(226,232,240,0.06); }
-body.dark-mode .featured-card:hover { border-color: rgba(59,130,246,0.18); }
-body.dark-mode .featured-techs span { background: rgba(59,130,246,0.08); border-color: rgba(59,130,246,0.15); color: #93c5fd; }
 body.dark-mode .method-step { background: rgba(20,31,58,0.55); border-color: rgba(226,232,240,0.06); }
 body.dark-mode .method-num { background: rgba(59,130,246,0.1); color: var(--primary); }
 body.dark-mode .cs-badge { background: rgba(59,130,246,0.1); color: #93c5fd; }
@@ -288,40 +285,6 @@ img { max-width: 100%; height: auto; display: block; }
     background: var(--surface);
 }
 
-/* FEATURED PROJECTS */
-.featured-grid { display: grid; gap: 28px; margin-top: 20px; }
-.featured-card {
-    display: flex; flex-direction: column;
-    border: 1px solid var(--line); border-radius: var(--radius-lg); overflow: hidden;
-    background: var(--surface);
-    box-shadow: var(--shadow-sm);
-    transition: transform 0.25s ease, box-shadow 0.3s ease, border-color 0.25s;
-}
-.featured-card:hover { transform: translateY(-2px); box-shadow: 0 8px 20px rgba(0,0,0,0.06); border-color: #c8d4ef; }
-.featured-visual {
-    position: relative; overflow: hidden; background: #101520;
-    width: 100%; aspect-ratio: 16 / 9; display: flex; align-items: center; justify-content: center;
-}
-.featured-visual img, .featured-visual video {
-    position: absolute; top: 0; left: 0;
-    width: 100%; height: 100%; object-fit: cover; object-position: top;
-    transition: transform 0.5s ease;
-}
-.featured-card:hover .featured-visual img, .featured-card:hover .featured-visual video { transform: scale(1.05); }
-.featured-info { padding: 36px 40px 40px; display: flex; flex-direction: column; justify-content: center; }
-.featured-title { margin: 6px 0 4px; font-size: 1.65rem; border-left: 3px solid var(--primary); padding-left: 14px; }
-.featured-subtitle { margin: 0 0 16px; font-size: 0.88rem; color: var(--muted); font-weight: 400; padding-left: 17px; }
-.featured-desc { margin-bottom: 20px; }
-.featured-desc p { margin: 0 0 10px; font-size: 0.93rem; color: var(--muted); line-height: 1.65; }
-.featured-desc p:last-child { margin-bottom: 0; }
-.featured-techs { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 20px; }
-.featured-techs span {
-    font-size: 0.78rem; font-weight: 600; padding: 5px 14px;
-    border-radius: 999px; background: #eef4ff; border: 1px solid #cddfff;
-    color: var(--primary); letter-spacing: 0.01em;
-}
-.featured-links { display: flex; gap: 10px; }
-
 /* PROJECTS (other) - same as before but adjusted */
 .projects-list { display: grid; gap: 16px; margin-top: 16px; }
 
@@ -434,7 +397,6 @@ img { max-width: 100%; height: auto; display: block; }
     .focus-grid { grid-template-columns: 1fr; }
     .wms-grid { grid-template-columns: repeat(2, 1fr); }
     .wms-card:nth-child(2) { border-right: none; }
-    .featured-visual { aspect-ratio: 16 / 8; }
     .method-steps { grid-template-columns: repeat(2, 1fr); }
 }
 
@@ -464,19 +426,14 @@ img { max-width: 100%; height: auto; display: block; }
     .wms-gallery { flex-direction: column; gap: 4px; }
     .wms-gallery-item { flex: none; }
     .devos-tech { flex-direction: column; gap: 18px; }
-    .featured-info { padding: 18px; }
-    .featured-title { font-size: 1.2rem; }
-    .featured-subtitle { font-size: 0.82rem; padding-left: 14px; }
 }
 
 @media (prefers-reduced-motion: reduce) {
     html { scroll-behavior: auto; }
     .reveal { opacity: 1; transform: none; transition: none; }
-    .btn:hover, .project-card:hover, .contact-item:hover, .featured-card:hover, .method-step:hover { transform: none !important; }
+    .btn:hover, .project-card:hover, .contact-item:hover, .method-step:hover { transform: none !important; }
     .project-card:hover .project-visual img { transform: none; }
     .project-card:hover .project-visual video { transform: none; }
-    .featured-card:hover .featured-visual img { transform: none; }
-    .featured-card:hover .featured-visual video { transform: none; }
 }
 
 @media (max-width: 380px) {
