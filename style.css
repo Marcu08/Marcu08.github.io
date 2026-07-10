@@ -76,6 +76,7 @@ img { max-width: 100%; height: auto; display: block; }
 .bg-shape { position: fixed; border-radius: 50%; filter: blur(120px); z-index: -1; opacity: 0.10; }
 .bg-shape-1 { width: 400px; height: 400px; background: #8eb6ff; top: 2%; left: -140px; }
 .bg-shape-2 { width: 380px; height: 380px; background: #ffc4ad; right: -160px; top: 20%; }
+.bg-grain { position: fixed; inset: 0; z-index: -1; pointer-events: none; background-image: radial-gradient(circle, var(--ink) 0.5px, transparent 0.5px); background-size: 28px 28px; opacity: 0.055; }
 
 .site-header {
     position: sticky; top: 0; z-index: 40;
