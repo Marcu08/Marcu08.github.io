@@ -167,116 +167,43 @@
       </div>
     </section>
 
-    <!-- 3. FEATURED CASE STUDY: WMS -->
+    <!-- 3. FEATURED PROJECTS -->
     <section class="container section reveal" id="work">
-      <p class="section-eyebrow">Real-world project</p>
-      <h2 class="section-title-lg">Warehouse Management System</h2>
-      <p class="section-subtitle">Digitizing logistics processes through OCR, automation and real-time data management.</p>
+      <p class="section-eyebrow">Featured projects</p>
+      <h2 class="section-title-lg">Case studies</h2>
+      <div class="projects-list">
+        <article class="project-card">
+          <div class="project-visual">
+            <img src="assets/wms/wms-dashboard.webp" alt="WMS dashboard" loading="lazy" />
+          </div>
+          <div class="project-info">
+            <div class="project-context">PWA &middot; React &middot; Supabase</div>
+            <h3>Warehouse Management System</h3>
+            <p>PWA that digitizes logistics workflows through OCR document processing, barcode scanning and real-time inventory management.</p>
+            <button class="btn btn-primary btn-sm" onclick="openModal('wms')">View Case Study</button>
+          </div>
+        </article>
 
-      <div class="wms-hero">
-        <div class="wms-visual">
-          <img src="assets/wms/wms-dashboard.webp" alt="WMS dashboard overview showing warehouse management interface" loading="lazy" />
-        </div>
-        <div class="wms-gallery">
-          <div class="wms-gallery-item">
-            <div class="wms-gallery-img">
-              <img src="assets/wms/wms-ocr.webp" alt="OCR document scanning interface showing automated data extraction" loading="lazy" />
+        <article class="project-card">
+          <div class="project-visual" style="background:#101520">
+            <video autoplay muted loop playsinline preload="metadata" disablepictureinpicture aria-hidden="true" style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;z-index:2">
+              <source src="assets/devos-preview.webm" type="video/webm">
+            </video>
+          </div>
+          <div class="project-info">
+            <div class="project-context">Open Source &middot; Node.js &middot; PowerShell</div>
+            <h3>DevOS</h3>
+            <p>Automation platform that configures and maintains development environments through Node.js and PowerShell orchestration.</p>
+            <div style="display:flex;gap:8px;flex-wrap:wrap">
+              <button class="btn btn-primary btn-sm" onclick="openModal('devos')">View Case Study</button>
+              <a class="btn btn-secondary btn-sm" href="https://github.com/Marcu08/DevOS" target="_blank" rel="noopener noreferrer"><svg class="icon"><use href="#icon-github"></use></svg> Source</a>
             </div>
-            <p class="wms-gallery-caption">OCR document acquisition workflow</p>
           </div>
-          <div class="wms-gallery-item">
-            <div class="wms-gallery-img">
-              <img src="assets/wms/wms-export.webp" alt="Data export interface showing generated documents and reports" loading="lazy" />
-            </div>
-            <p class="wms-gallery-caption">Data management and export</p>
-          </div>
-        </div>
-        <div class="wms-desc">
-          <p>A warehouse management platform built to digitize manual logistics workflows through document processing, inventory management and automated data handling.</p>
-        </div>
-        <div class="wms-grid">
-          <div class="wms-card">
-            <span class="wms-label">Problem</span>
-            <p>Manual document handling, Excel-based inventory management, transcription errors and limited visibility on warehouse operations.</p>
-          </div>
-          <div class="wms-card">
-            <span class="wms-label">Solution</span>
-            <p>A PWA platform with OCR document processing, barcode scanning, inventory management, database synchronization and automatic DDT generation.</p>
-          </div>
-          <div class="wms-card">
-            <span class="wms-label">Technologies</span>
-            <p>React &middot; Supabase &middot; Tesseract OCR &middot; PWA &middot; Database systems</p>
-          </div>
-          <div class="wms-card">
-            <span class="wms-label">Result</span>
-            <p>Automated document extraction, barcode scanning, inventory management and DDT generation reduced manual operations and improved data visibility.</p>
-          </div>
-        </div>
+        </article>
       </div>
     </section>
 
-    <!-- 4. DEVOS (unified) -->
-    <section class="container section reveal">
-      <p class="section-eyebrow">Open source project</p>
-      <h2 class="section-title-lg">DevOS</h2>
-      <p class="section-subtitle">Development Environment Automation Platform</p>
-
-      <div class="wms-hero">
-        <div class="wms-visual" style="aspect-ratio:16/9">
-          <video autoplay muted loop playsinline preload="metadata" disablepictureinpicture aria-hidden="true">
-            <source src="assets/devos-preview.webm" type="video/webm">
-          </video>
-        </div>
-        <div class="wms-desc">
-          <p>DevOS started from a real problem in software development: configuring and maintaining dev environments manually takes time and creates inconsistencies. The solution is an automation system that coordinates scripts, updates and automatic checks.</p>
-        </div>
-        <div class="wms-grid">
-          <div class="wms-card">
-            <span class="wms-label">Problem</span>
-            <p>30 minutes of manual work for each update — patches, tests, rollbacks. Repetitive and error-prone.</p>
-          </div>
-          <div class="wms-card">
-            <span class="wms-label">Solution</span>
-            <p>A Node.js agent that automates the full workflow: PowerShell orchestration, sequential patches, automatic validation and rollback on failure.</p>
-          </div>
-          <div class="wms-card">
-            <span class="wms-label">Technologies</span>
-            <p>Node.js &middot; PowerShell &middot; JavaScript</p>
-          </div>
-          <div class="wms-card">
-            <span class="wms-label">Result</span>
-            <p>Setup in seconds. Automatic rollback prevents corruption. Fully reproducible.</p>
-          </div>
-        </div>
-        <div class="devos-tech">
-          <div class="devos-tech-block">
-            <h4 class="devos-tech-title">Architecture</h4>
-            <div class="arch-flow">
-              <span class="arch-node">Node.js</span>
-              <span class="arch-arrow">&darr;</span>
-              <span class="arch-node">PowerShell</span>
-              <span class="arch-arrow">&darr;</span>
-              <span class="arch-node">System automation</span>
-            </div>
-          </div>
-          <div class="devos-tech-block">
-            <h4 class="devos-tech-title">Capabilities</h4>
-            <ul class="caps-list">
-              <li>Automated setup</li>
-              <li>Environment updates</li>
-              <li>Validation checks</li>
-              <li>Automatic rollback</li>
-            </ul>
-          </div>
-        </div>
-        <div class="wms-footer">
-          <a class="btn btn-secondary btn-sm" href="https://github.com/Marcu08/DevOS" target="_blank" rel="noopener noreferrer" aria-label="DevOS source code on GitHub"><svg class="icon"><use href="#icon-github"></use></svg> View source</a>
-          <span class="cs-badge">Open Source</span>
-        </div>
-      </div>
-    </section>
-
-    <!-- 5. CLIENT PROJECTS -->
+    <!-- 4. CLIENT PROJECTS -->
     <section class="container section reveal">
       <p class="section-eyebrow">Production projects</p>
       <h2 class="section-title-lg">Real client projects</h2>
@@ -288,8 +215,11 @@
           <div class="project-info">
             <div class="project-context">Web &amp; Content Management</div>
             <h3>Team Fabiana Luperini</h3>
-            <p>Professional website for a cycling team, focused on responsive design and content management.</p>
-            <a class="btn btn-secondary btn-sm" href="https://www.teamfabianaluperini.it" target="_blank" rel="noopener noreferrer" aria-label="Visit Team Fabiana Luperini website">Visit <svg class="icon"><use href="#icon-arrow-right"></use></svg></a>
+            <p>Professional website for a women's cycling team with responsive design and content management.</p>
+            <div style="display:flex;gap:8px;flex-wrap:wrap">
+              <button class="btn btn-primary btn-sm" onclick="openModal('tfl')">View Case Study</button>
+              <a class="btn btn-secondary btn-sm" href="https://www.teamfabianaluperini.it" target="_blank" rel="noopener noreferrer">Visit <svg class="icon"><use href="#icon-arrow-right"></use></svg></a>
+            </div>
           </div>
         </article>
 
@@ -300,14 +230,17 @@
           <div class="project-info">
             <div class="project-context">Presso Logistic Solution</div>
             <h3>Logistic Solution</h3>
-            <p>B2B website redesign to improve communication and user experience.</p>
-            <a class="btn btn-secondary btn-sm" href="https://www.logisticsolution.net" target="_blank" rel="noopener noreferrer" aria-label="Visit Logistic Solution website">Visit <svg class="icon"><use href="#icon-arrow-right"></use></svg></a>
+            <p>B2B website redesign to improve communication, showcase services and enhance user experience.</p>
+            <div style="display:flex;gap:8px;flex-wrap:wrap">
+              <button class="btn btn-primary btn-sm" onclick="openModal('logistic')">View Case Study</button>
+              <a class="btn btn-secondary btn-sm" href="https://www.logisticsolution.net" target="_blank" rel="noopener noreferrer">Visit <svg class="icon"><use href="#icon-arrow-right"></use></svg></a>
+            </div>
           </div>
         </article>
       </div>
     </section>
 
-    <!-- 6. OTHER PROJECTS -->
+    <!-- 5. OTHER PROJECTS -->
     <section class="container section reveal">
       <p class="section-eyebrow">Additional projects</p>
       <h2 class="section-title-lg">Other projects</h2>
@@ -320,6 +253,7 @@
           <div class="project-info">
             <h3>Sistema Ferie</h3>
             <p>Web platform for managing leave requests with an approval workflow, replacing the old shared Excel system.</p>
+            <button class="btn btn-primary btn-sm" onclick="openModal('ferie')">View Case Study</button>
           </div>
         </article>
 
@@ -330,8 +264,11 @@
           <div class="project-info">
             <div class="project-context">Presso Logistic Solution</div>
             <h3>LS-SOFFAS</h3>
-            <p>Data extraction system from unstructured PDFs, database organization and automatic report generation.</p>
-            <a class="btn btn-secondary btn-sm" href="https://github.com/Marcu08/LS-SOFFAS" target="_blank" rel="noopener noreferrer" aria-label="LS-SOFFAS source code on GitHub"><svg class="icon"><use href="#icon-github"></use></svg> Source</a>
+            <p>Data extraction system from unstructured PDFs with database organization and automatic report generation.</p>
+            <div style="display:flex;gap:8px;flex-wrap:wrap">
+              <button class="btn btn-primary btn-sm" onclick="openModal('soffas')">View Case Study</button>
+              <a class="btn btn-secondary btn-sm" href="https://github.com/Marcu08/LS-SOFFAS" target="_blank" rel="noopener noreferrer"><svg class="icon"><use href="#icon-github"></use></svg> Source</a>
+            </div>
           </div>
         </article>
       </div>
@@ -370,7 +307,7 @@
       </div>
     </section>
 
-    <!-- 8. ABOUT -->
+    <!-- 6. ABOUT -->
     <section class="container section reveal" id="about">
       <p class="section-eyebrow">Approach</p>
       <h2 class="section-title-lg">How I work</h2>
@@ -385,7 +322,7 @@
       </div>
     </section>
 
-    <!-- 9. CONTACT -->
+    <!-- 7. CONTACT -->
     <section class="container section reveal" id="contact">
       <p class="section-eyebrow">Contact</p>
       <h2 class="section-title-lg">Let's discuss your project</h2>
@@ -398,6 +335,440 @@
     </section>
 
   </main>
+
+  <!-- MODAL -->
+  <div class="modal-overlay" id="modal" onclick="if(event.target===this)closeModal()" role="dialog" aria-modal="true" aria-label="Project case study">
+    <div class="modal-box" id="modal-box"></div>
+  </div>
+
+  <!-- MODAL CONTENT: WMS -->
+  <div id="modal-wms" hidden>
+    <button class="modal-close" onclick="closeModal()" aria-label="Close">&times;</button>
+    <p class="modal-eyebrow">Featured project</p>
+    <h2>Warehouse Management System</h2>
+    <div class="modal-meta">
+      <span><svg class="icon"><use href="#icon-code"></use></svg> PWA</span>
+      <span><svg class="icon"><use href="#icon-database"></use></svg> Supabase</span>
+      <span><svg class="icon"><use href="#icon-file-image"></use></svg> Tesseract OCR</span>
+    </div>
+    <div class="modal-visual"><img src="assets/wms/wms-dashboard.webp" alt="WMS dashboard" /></div>
+
+    <div class="modal-section">
+      <h3>Project Overview</h3>
+      <p>A warehouse management platform built to digitize manual logistics workflows. It replaces paper-based processes with OCR document scanning, barcode inventory tracking and real-time database synchronization through a Progressive Web App interface.</p>
+    </div>
+
+    <div class="modal-section">
+      <h3>The Problem</h3>
+      <p>The warehouse relied on paper documents, Excel spreadsheets and manual data entry for receiving goods, managing inventory and generating shipping documents. Operators spent significant time transcribing information, errors were common and there was no real-time visibility into stock levels or order status.</p>
+    </div>
+
+    <div class="modal-section">
+      <h3>My Solution</h3>
+      <p>I designed a PWA that works across desktop and mobile devices without installation. The frontend is built with React and communicates with a Supabase backend for real-time database synchronization. The core innovation is the OCR module — operators capture documents with any device camera, the system extracts key data automatically and populates the database. Barcode scanning adds a second automated input channel for inventory operations. The platform also generates DDT shipping documents automatically, eliminating manual compilation.</p>
+    </div>
+
+    <div class="modal-section">
+      <h3>Technical Highlights</h3>
+      <ul>
+        <li><strong>OCR document processing</strong> — Tesseract.js runs in-browser to extract supplier names, dates, amounts and item details from incoming documents. Confidence scoring flags uncertain reads for manual review.</li>
+        <li><strong>Barcode scanning</strong> — Integrated hardware barcode scanning for inventory operations. Updates propagate to the database in real time.</li>
+        <li><strong>Real-time sync</strong> — Supabase subscriptions push database changes to all connected clients instantly, enabling multi-user warehouse operations.</li>
+        <li><strong>Offline resilience</strong> — Service workers cache critical assets and queued operations sync when connectivity is restored.</li>
+        <li><strong>Automatic DDT generation</strong> — Shipping documents are compiled from database records and exported as formatted PDFs.</li>
+      </ul>
+    </div>
+
+    <div class="modal-section">
+      <h3>Challenges</h3>
+      <p>OCR accuracy was the hardest problem. Document quality varied — handwritten notes, low-light photos, folded papers. I implemented confidence-based filtering: the system accepts high-confidence extractions automatically and flags uncertain ones for manual verification. This balance between automation and human oversight was key to making the system reliable in production.</p>
+    </div>
+
+    <div class="modal-section">
+      <h3>Lessons Learned</h3>
+      <ul>
+        <li>Building offline-first requires designing state management around sync conflicts from the start.</li>
+        <li>PWA installation and service worker caching significantly improve adoption on warehouse floor devices.</li>
+        <li>Real-time database subscriptions simplify multi-user scenarios but need careful handling of connection drops.</li>
+      </ul>
+    </div>
+
+    <div class="modal-section">
+      <h3>Technologies</h3>
+      <div class="modal-tags">
+        <span class="cs-badge">React</span>
+        <span class="cs-badge">Supabase</span>
+        <span class="cs-badge">Tesseract OCR</span>
+        <span class="cs-badge">PWA</span>
+        <span class="cs-badge">JavaScript</span>
+        <span class="cs-badge">Service Workers</span>
+      </div>
+    </div>
+
+    <div class="modal-section">
+      <h3>Project Info</h3>
+      <div class="modal-meta">
+        <span>Type: PWA Application</span>
+        <span>Status: Production</span>
+        <span>Platform: Web / Mobile</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL CONTENT: DEVOS -->
+  <div id="modal-devos" hidden>
+    <button class="modal-close" onclick="closeModal()" aria-label="Close">&times;</button>
+    <p class="modal-eyebrow">Open source project</p>
+    <h2>DevOS</h2>
+    <div class="modal-meta">
+      <span><svg class="icon"><use href="#icon-terminal"></use></svg> Node.js</span>
+      <span><svg class="icon"><use href="#icon-code"></use></svg> PowerShell</span>
+      <span><svg class="icon"><use href="#icon-github"></use></svg> Open Source</span>
+    </div>
+    <div class="modal-visual" style="background:#080e1a"><video autoplay muted loop playsinline preload="metadata" style="width:100%;display:block"><source src="assets/devos-preview.webm" type="video/webm"></video></div>
+
+    <div class="modal-section">
+      <h3>Project Overview</h3>
+      <p>DevOS automates the setup, update and maintenance of software development environments. It eliminates repetitive manual configuration through a Node.js agent that orchestrates PowerShell scripts, applies sequential patches and validates system state at each step.</p>
+    </div>
+
+    <div class="modal-section">
+      <h3>The Problem</h3>
+      <p>Every development environment update required about 30 minutes of manual work: downloading patches, running installers, testing configurations and rolling back on failure. The process was repetitive, error-prone and inconsistent across different machines. A mistake could leave the environment in an unrecoverable state.</p>
+    </div>
+
+    <div class="modal-section">
+      <h3>My Solution</h3>
+      <p>I built a Node.js agent that reads a configuration file and executes automation steps in sequence. Each step runs a PowerShell script, validates the result and either proceeds or triggers an automatic rollback. The architecture is simple: Node.js orchestrates the logic, PowerShell handles system-level operations and the state machine ensures every step either completes successfully or reverts cleanly.</p>
+    </div>
+
+    <div class="modal-section">
+      <h3>Technical Highlights</h3>
+      <ul>
+        <li><strong>Sequential automation</strong> — Each patch or configuration change runs as an ordered step. Failure at any step halts the pipeline and triggers rollback.</li>
+        <li><strong>PowerShell orchestration</strong> — Node.js spawns PowerShell processes for system-level operations, capturing stdout/stderr for validation and logging.</li>
+        <li><strong>Automatic rollback</strong> — If a step fails, the system reverses all completed steps to restore the previous working state. This prevents partial updates from breaking the environment.</li>
+        <li><strong>Validation hooks</strong> — Each step includes a validation script that checks whether the operation succeeded before proceeding.</li>
+      </ul>
+    </div>
+
+    <div class="modal-section">
+      <h3>Challenges</h3>
+      <p>Handling diverse Windows environments was the main challenge. Different PowerShell versions, execution policies and user permissions could break scripts. I addressed this by including environment detection at startup and graceful fallbacks for incompatible configurations. The rollback system was also tricky to design — it needed to be reliable enough that operators trusted automation over manual work.</p>
+    </div>
+
+    <div class="modal-section">
+      <h3>Lessons Learned</h3>
+      <ul>
+        <li>Automation is only trusted when failure recovery is guaranteed — rollback is more important than execution.</li>
+        <li>Cross-environment testing is essential for tools that run on different machines.</li>
+        <li>A simple architecture (Node.js → PowerShell) was more maintainable than adding a complex framework.</li>
+      </ul>
+    </div>
+
+    <div class="modal-section">
+      <h3>Technologies</h3>
+      <div class="modal-tags">
+        <span class="cs-badge">Node.js</span>
+        <span class="cs-badge">PowerShell</span>
+        <span class="cs-badge">JavaScript</span>
+      </div>
+    </div>
+
+    <div class="modal-section">
+      <h3>Project Info</h3>
+      <div class="modal-meta">
+        <span>Type: CLI Automation Tool</span>
+        <span>Status: Active Development</span>
+        <span>License: Open Source</span>
+        <a class="header-link" href="https://github.com/Marcu08/DevOS" target="_blank" rel="noopener noreferrer" style="font-size:0.82rem"><svg class="icon"><use href="#icon-github"></use></svg> Repository</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL CONTENT: TFL -->
+  <div id="modal-tfl" hidden>
+    <button class="modal-close" onclick="closeModal()" aria-label="Close">&times;</button>
+    <p class="modal-eyebrow">Client project</p>
+    <h2>Team Fabiana Luperini</h2>
+    <div class="modal-meta">
+      <span><svg class="icon"><use href="#icon-code"></use></svg> Website</span>
+      <span><svg class="icon"><use href="#icon-calendar"></use></svg> CMS</span>
+    </div>
+    <div class="modal-visual"><img src="screenshot-tfl.webp" alt="Team Fabiana Luperini website screenshot" /></div>
+
+    <div class="modal-section">
+      <h3>Project Overview</h3>
+      <p>A professional website for a women's cycling team. The site showcases the team's roster, race calendar, results and sponsors. It was built to be easy to update by non-technical staff through a content management system.</p>
+    </div>
+
+    <div class="modal-section">
+      <h3>The Problem</h3>
+      <p>The team had no dedicated online presence. Information about races, results and sponsors was scattered across social media. The team manager needed a central website that could be updated quickly without technical skills and that presented a professional image to sponsors and media.</p>
+    </div>
+
+    <div class="modal-section">
+      <h3>My Solution</h3>
+      <p>I built a responsive website with a CMS backend that lets the team publish news, update rosters and manage the race calendar without touching code. The design focuses on readability and visual hierarchy — large typography, clear sections and prominent sponsor visibility. The site adapts to mobile and desktop, which is important for fans browsing on phones during races.</p>
+    </div>
+
+    <div class="modal-section">
+      <h3>Technical Highlights</h3>
+      <ul>
+        <li><strong>CMS integration</strong> — Custom admin panel for managing content without technical knowledge.</li>
+        <li><strong>Responsive design</strong> — Mobile-first layout that works on phones, tablets and desktops.</li>
+        <li><strong>Sponsor management</strong> — Dynamic sponsor carousel that team staff can update through the admin panel.</li>
+        <li><strong>Race calendar</strong> — Upcoming and past events displayed with results, photos and links.</li>
+      </ul>
+    </div>
+
+    <div class="modal-section">
+      <h3>Challenges</h3>
+      <p>The main challenge was building an admin interface that was genuinely usable by someone without technical experience. Every content editing operation needed to be intuitive — I focused on clear form labels, inline previews and confirmation dialogs for destructive actions. The responsive layout also required careful testing across a wide range of devices.</p>
+    </div>
+
+    <div class="modal-section">
+      <h3>Lessons Learned</h3>
+      <ul>
+        <li>A CMS must be designed around its specific content types, not generic blog-style editing.</li>
+        <li>Client training and documentation reduce support requests significantly.</li>
+        <li>Mobile-first design is essential for sports websites where most users browse on phones.</li>
+      </ul>
+    </div>
+
+    <div class="modal-section">
+      <h3>Technologies</h3>
+      <div class="modal-tags">
+        <span class="cs-badge">PHP</span>
+        <span class="cs-badge">MySQL</span>
+        <span class="cs-badge">JavaScript</span>
+        <span class="cs-badge">Responsive CSS</span>
+        <span class="cs-badge">HTML</span>
+      </div>
+    </div>
+
+    <div class="modal-section">
+      <h3>Project Info</h3>
+      <div class="modal-meta">
+        <span>Type: CMS Website</span>
+        <span>Status: Live</span>
+        <a href="https://www.teamfabianaluperini.it" target="_blank" rel="noopener noreferrer" style="font-size:0.82rem;color:var(--primary);font-weight:600">Visit site &rarr;</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL CONTENT: LOGISTIC SOLUTION -->
+  <div id="modal-logistic" hidden>
+    <button class="modal-close" onclick="closeModal()" aria-label="Close">&times;</button>
+    <p class="modal-eyebrow">Client project</p>
+    <h2>Logistic Solution</h2>
+    <div class="modal-meta">
+      <span><svg class="icon"><use href="#icon-code"></use></svg> B2B Website</span>
+      <span><svg class="icon"><use href="#icon-lightbulb"></use></svg> Redesign</span>
+    </div>
+    <div class="modal-visual"><img src="screenshot-ls.webp" alt="Logistic Solution website screenshot" /></div>
+
+    <div class="modal-section">
+      <h3>Project Overview</h3>
+      <p>A complete redesign of the corporate website for Logistic Solution, a logistics and transportation company. The project modernized the company's online presence to better communicate its services and value proposition to B2B clients.</p>
+    </div>
+
+    <div class="modal-section">
+      <h3>The Problem</h3>
+      <p>The existing website was outdated: poor visual hierarchy, non-functional contact forms and a layout that didn't work on mobile devices. Potential clients visiting the site couldn't easily understand the company's services or get in touch. The site was also hard for the company to update.</p>
+    </div>
+
+    <div class="modal-section">
+      <h3>My Solution</h3>
+      <p>I redesigned the site with a clear information architecture that guides visitors from understanding the company's services to contacting the sales team. The design uses the company's brand colors with improved typography and spacing. Contact forms were rebuilt with validation and email notifications. The backend allows staff to update service descriptions and company information.</p>
+    </div>
+
+    <div class="modal-section">
+      <h3>Technical Highlights</h3>
+      <ul>
+        <li><strong>B2B UX design</strong> — Information architecture optimized for business visitors evaluating a logistics partner.</li>
+        <li><strong>Contact form with validation</strong> — Client-side and server-side validation with email notifications to the sales team.</li>
+        <li><strong>Responsive redesign</strong> — Full mobile adaptation from a previously desktop-only layout.</li>
+        <li><strong>CMS backend</strong> — Admin panel for updating content without technical support.</li>
+      </ul>
+    </div>
+
+    <div class="modal-section">
+      <h3>Challenges</h3>
+      <p>Working with the existing brand identity while modernizing the look was a challenge. The company wanted a fresh design but needed to maintain brand recognition. I solved this by keeping the color palette and logo but completely reworking typography, spacing and layout. The contact form also needed careful spam protection while remaining user-friendly.</p>
+    </div>
+
+    <div class="modal-section">
+      <h3>Lessons Learned</h3>
+      <ul>
+        <li>B2B websites need different UX patterns than B2C — clarity and trust signals matter more than flashy design.</li>
+        <li>Form usability directly impacts lead generation — every extra field reduces conversion.</li>
+        <li>Client education about content management reduces ongoing maintenance requests.</li>
+      </ul>
+    </div>
+
+    <div class="modal-section">
+      <h3>Technologies</h3>
+      <div class="modal-tags">
+        <span class="cs-badge">PHP</span>
+        <span class="cs-badge">MySQL</span>
+        <span class="cs-badge">JavaScript</span>
+        <span class="cs-badge">Responsive CSS</span>
+        <span class="cs-badge">HTML</span>
+      </div>
+    </div>
+
+    <div class="modal-section">
+      <h3>Project Info</h3>
+      <div class="modal-meta">
+        <span>Type: Corporate Website</span>
+        <span>Status: Live</span>
+        <a href="https://www.logisticsolution.net" target="_blank" rel="noopener noreferrer" style="font-size:0.82rem;color:var(--primary);font-weight:600">Visit site &rarr;</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL CONTENT: SISTEMA FERIE -->
+  <div id="modal-ferie" hidden>
+    <button class="modal-close" onclick="closeModal()" aria-label="Close">&times;</button>
+    <p class="modal-eyebrow">Internal tool</p>
+    <h2>Sistema Ferie</h2>
+    <div class="modal-meta">
+      <span><svg class="icon"><use href="#icon-calendar"></use></svg> Leave Management</span>
+      <span><svg class="icon"><use href="#icon-code"></use></svg> Web Platform</span>
+    </div>
+    <div class="modal-visual"><img src="screenshot-gestione-ferie.webp" alt="Sistema Ferie interface" onerror="this.style.display='none'" /></div>
+
+    <div class="modal-section">
+      <h3>Project Overview</h3>
+      <p>A web platform for managing employee leave requests with an approval workflow. It replaces a shared Excel spreadsheet system, giving employees a self-service interface and managers a structured approval process.</p>
+    </div>
+
+    <div class="modal-section">
+      <h3>The Problem</h3>
+      <p>The company managed leave requests through a shared Excel file on a network drive. Employees had to manually check availability, ask managers informally and hope the file was updated correctly. There were overlapping approvals, lost requests and no visibility into who was off on any given day.</p>
+    </div>
+
+    <div class="modal-section">
+      <h3>My Solution</h3>
+      <p>I built a web-based platform where employees log in, view their remaining leave days and submit requests through a form. Managers receive notifications and can approve or reject with one click. The system automatically prevents overlapping leave and shows a team calendar with everyone's approved time off. Authentication uses the existing company credentials.</p>
+    </div>
+
+    <div class="modal-section">
+      <h3>Technical Highlights</h3>
+      <ul>
+        <li><strong>Approval workflow</strong> — State machine with pending, approved, rejected states. Notifications at each transition.</li>
+        <li><strong>Conflict detection</strong> — Automatic checks prevent overlapping leave for the same person.</li>
+        <li><strong>Team calendar</strong> — Visual overview of who is off on any given day, filtered by department.</li>
+        <li><strong>Leave balance tracking</strong> — Automatic calculation of remaining days based on contract type and history.</li>
+      </ul>
+    </div>
+
+    <div class="modal-section">
+      <h3>Challenges</h3>
+      <p>Italian employment law has complex rules about leave types, accruals and carry-over. I had to model different contract types with different rules and ensure the system calculated balances correctly. The approval workflow also needed to handle edge cases like retroactive requests and cancellations.</p>
+    </div>
+
+    <div class="modal-section">
+      <h3>Lessons Learned</h3>
+      <ul>
+        <li>Domain rules (employment law, contracts) are the hardest part of business software — technology is the easy part.</li>
+        <li>Form validation and clear error messages prevent support requests.</li>
+        <li>Using existing company credentials for login removed the biggest adoption barrier.</li>
+      </ul>
+    </div>
+
+    <div class="modal-section">
+      <h3>Technologies</h3>
+      <div class="modal-tags">
+        <span class="cs-badge">PHP</span>
+        <span class="cs-badge">MySQL</span>
+        <span class="cs-badge">JavaScript</span>
+        <span class="cs-badge">HTML</span>
+        <span class="cs-badge">CSS</span>
+      </div>
+    </div>
+
+    <div class="modal-section">
+      <h3>Project Info</h3>
+      <div class="modal-meta">
+        <span>Type: Internal Web App</span>
+        <span>Status: Production</span>
+        <span>Users: Company employees</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL CONTENT: LS-SOFFAS -->
+  <div id="modal-soffas" hidden>
+    <button class="modal-close" onclick="closeModal()" aria-label="Close">&times;</button>
+    <p class="modal-eyebrow">Client project</p>
+    <h2>LS-SOFFAS</h2>
+    <div class="modal-meta">
+      <span><svg class="icon"><use href="#icon-file-image"></use></svg> Data Extraction</span>
+      <span><svg class="icon"><use href="#icon-database"></use></svg> PDF Processing</span>
+    </div>
+    <div class="modal-visual"><img src="screenshot-ls-Soffass.webp" alt="LS-SOFFAS interface" /></div>
+
+    <div class="modal-section">
+      <h3>Project Overview</h3>
+      <p>An automated data extraction system that processes unstructured PDF documents — supplier invoices, shipping notes and customs forms — extracts key information and organizes it into a structured database with automatic report generation.</p>
+    </div>
+
+    <div class="modal-section">
+      <h3>The Problem</h3>
+      <p>Logistic Solution received dozens of PDF documents daily from different suppliers and logistics partners. Each document had a different format. Staff manually read each PDF, typed the relevant data into the system and generated reports. The process was slow, error-prone and consumed hours of clerical work every day.</p>
+    </div>
+
+    <div class="modal-section">
+      <h3>My Solution</h3>
+      <p>I built a system that ingests PDF files, extracts text content using PDF parsing libraries and applies pattern matching to identify and extract structured data. The extracted data is validated, stored in a database and used to automatically generate formatted reports. The system handles multiple document types by detecting the document category and applying the appropriate extraction rules.</p>
+    </div>
+
+    <div class="modal-section">
+      <h3>Technical Highlights</h3>
+      <ul>
+        <li><strong>PDF parsing</strong> — Extracts text content from PDFs using PDF parsing libraries, handling both text-based and scanned documents.</li>
+        <li><strong>Pattern matching</strong> — Regular expressions and heuristics identify key fields (dates, amounts, supplier names, document numbers) from unstructured text.</li>
+        <li><strong>Document classification</strong> — Automatically detects document type (invoice, shipping note, customs form) and applies the correct extraction rules.</li>
+        <li><strong>Report generation</strong> — Aggregates extracted data into formatted reports, reducing manual compilation work.</li>
+      </ul>
+    </div>
+
+    <div class="modal-section">
+      <h3>Challenges</h3>
+      <p>The biggest challenge was handling the variety of document formats. Each supplier used different layouts, terminology and even languages. I built a flexible extraction engine that combines multiple strategies: positional extraction for structured layouts, keyword matching for semi-structured documents and fallback to full-text search for completely unstructured content. Building and maintaining the pattern library required many iterations with real documents.</p>
+    </div>
+
+    <div class="modal-section">
+      <h3>Lessons Learned</h3>
+      <ul>
+        <li>Document processing requires handling significant real-world variance — testing with sample documents is not enough.</li>
+        <li>A multi-strategy extraction approach (positional + keyword + full-text) improves coverage across document types.</li>
+        <li>Logging extraction failures and providing a manual review interface was essential for building trust in the system.</li>
+      </ul>
+    </div>
+
+    <div class="modal-section">
+      <h3>Technologies</h3>
+      <div class="modal-tags">
+        <span class="cs-badge">Python</span>
+        <span class="cs-badge">PDF parsing</span>
+        <span class="cs-badge">SQL</span>
+        <span class="cs-badge">Regex</span>
+        <span class="cs-badge">Report generation</span>
+      </div>
+    </div>
+
+    <div class="modal-section">
+      <h3>Project Info</h3>
+      <div class="modal-meta">
+        <span>Type: Data Pipeline</span>
+        <span>Status: Production</span>
+        <a href="https://github.com/Marcu08/LS-SOFFAS" target="_blank" rel="noopener noreferrer" style="font-size:0.82rem;color:var(--primary);font-weight:600"><svg class="icon"><use href="#icon-github"></use></svg> Repository</a>
+      </div>
+    </div>
+  </div>
 
   <footer class="site-footer">
     <div class="footer-brand">Francesco Marcucci</div>
@@ -445,6 +816,21 @@
       const isDark = !body.classList.contains('dark-mode');
       applyTheme(isDark);
       localStorage.setItem('theme', isDark ? 'dark' : 'light');
+    });
+    function openModal(id) {
+      const src = document.getElementById('modal-' + id);
+      if (!src) return;
+      const box = document.getElementById('modal-box');
+      box.innerHTML = src.innerHTML;
+      document.getElementById('modal').classList.add('open');
+      document.body.classList.add('modal-open');
+    }
+    function closeModal() {
+      document.getElementById('modal').classList.remove('open');
+      document.body.classList.remove('modal-open');
+    }
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closeModal();
     });
   </script>
 </body>

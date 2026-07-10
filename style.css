@@ -39,11 +39,6 @@ body.dark-mode .project-img-fallback { background: rgba(20,31,58,0.6); color: va
 body.dark-mode .about-quote { background: rgba(59,130,246,0.06); border-color: rgba(59,130,246,0.12); }
 body.dark-mode .header-link { color: var(--muted); }
 body.dark-mode .header-link:hover { color: var(--ink); }
-body.dark-mode .wms-hero { background: rgba(20,31,58,0.5); border-color: rgba(226,232,240,0.06); }
-body.dark-mode .wms-card { border-color: rgba(226,232,240,0.06); }
-body.dark-mode .wms-visual { background: #080e1a; }
-body.dark-mode .wms-gallery-img { background: #080e1a; }
-body.dark-mode .wms-gallery-item { background: #080e1a; }
 body.dark-mode .focus-item { background: rgba(20,31,58,0.55); border-color: rgba(226,232,240,0.06); }
 body.dark-mode .focus-item:hover { border-color: rgba(59,130,246,0.18); }
 body.dark-mode .focus-icon { background: rgba(59,130,246,0.1); color: var(--primary); }
@@ -173,136 +168,7 @@ img { max-width: 100%; height: auto; display: block; }
 .focus-card h3 { margin: 0; font-size: 0.95rem; }
 .focus-card p { margin: 0; font-size: 0.83rem; color: var(--muted); line-height: 1.45; }
 
-/* WMS FEATURED CASE STUDY */
-.wms-hero {
-    border: 1px solid var(--line); border-radius: var(--radius-lg); overflow: hidden;
-    background: var(--surface); box-shadow: var(--shadow-sm);
-}
-.wms-visual {
-    position: relative; overflow: hidden;
-    width: 100%; aspect-ratio: 21 / 9;
-    background: #101520;
-}
-.wms-visual video,
-.wms-visual img {
-    position: absolute; top: 0; left: 0;
-    width: 100%; height: 100%; object-fit: cover; object-position: top;
-}
-.wms-gallery {
-    display: flex;
-    gap: 4px;
-    border-top: 1px solid var(--line);
-    background: var(--surface);
-}
-.wms-gallery-item {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    background: #101520;
-    border-radius: 0;
-    overflow: hidden;
-}
-.wms-gallery-img {
-    aspect-ratio: 21 / 9;
-    overflow: hidden;
-    background: #101520;
-}
-.wms-gallery-img img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: top;
-    display: block;
-}
-.wms-gallery-caption {
-    padding: 8px 14px 10px;
-    font-size: 0.78rem;
-    color: var(--muted);
-    margin: 0;
-    line-height: 1.4;
-}
-.wms-grid {
-    display: grid; grid-template-columns: repeat(4, 1fr); gap: 0;
-    border-top: 1px solid var(--line);
-}
-.wms-card {
-    padding: 20px 22px;
-    border-right: 1px solid var(--line);
-}
-.wms-card:last-child { border-right: none; }
-.wms-label {
-    display: block; font-size: 0.7rem; font-weight: 700; text-transform: uppercase;
-    letter-spacing: 0.08em; color: var(--primary); margin-bottom: 6px;
-}
-.wms-card p { margin: 0; font-size: 0.85rem; color: var(--muted); line-height: 1.5; }
-.wms-desc {
-    padding: 20px 22px;
-    border-top: 1px solid var(--line);
-}
-.wms-desc p { margin: 0; font-size: 0.9rem; color: var(--muted); line-height: 1.6; }
-.wms-footer {
-    padding: 14px 22px;
-    border-top: 1px solid var(--line);
-    display: flex; gap: 12px; align-items: center;
-}
-
-/* DEVOS TECH SECTION */
-.devos-tech {
-    display: flex;
-    gap: 14px;
-    padding: 20px 22px;
-    border-top: 1px solid var(--line);
-}
-.devos-tech-block {
-    flex: 1;
-}
-.devos-tech-title {
-    font-size: 0.7rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
-    color: var(--primary);
-    margin: 0 0 10px;
-    font-family: var(--font-display);
-}
-.arch-flow {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 4px;
-}
-.arch-node {
-    font-size: 0.83rem;
-    font-weight: 600;
-    padding: 6px 18px;
-    border: 1px solid var(--line);
-    border-radius: var(--radius-sm);
-    background: var(--surface);
-    font-family: var(--font-display);
-}
-.arch-arrow {
-    color: var(--muted);
-    font-size: 0.85rem;
-    line-height: 1;
-}
-.caps-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    gap: 6px;
-}
-.caps-list li {
-    font-size: 0.83rem;
-    color: var(--muted);
-    padding: 6px 14px;
-    border: 1px solid var(--line);
-    border-radius: var(--radius-sm);
-    background: var(--surface);
-}
-
-/* PROJECTS (other) - same as before but adjusted */
+/* PROJECTS */
 .projects-list { display: grid; gap: 16px; margin-top: 16px; }
 
 .project-card {
@@ -409,12 +275,41 @@ img { max-width: 100%; height: auto; display: block; }
 
 
 
+/* MODAL */
+.modal-overlay { position: fixed; inset: 0; z-index: 200; background: rgba(0,0,0,0.45); backdrop-filter: blur(6px); display: flex; align-items: center; justify-content: center; opacity: 0; pointer-events: none; transition: opacity 0.3s ease; padding: 20px; }
+.modal-overlay.open { opacity: 1; pointer-events: auto; }
+.modal-box { background: var(--surface); border-radius: var(--radius-lg); max-width: 740px; width: 100%; max-height: 88vh; overflow-y: auto; padding: 36px 40px; position: relative; transform: translateY(24px) scale(0.97); transition: transform 0.3s ease; box-shadow: 0 20px 60px rgba(0,0,0,0.15); }
+.modal-overlay.open .modal-box { transform: translateY(0) scale(1); }
+.modal-close { position: sticky; top: 0; float: right; z-index: 1; background: none; border: 1px solid var(--line); border-radius: 50%; width: 32px; height: 32px; display: flex; align-items: center; justify-content: center; cursor: pointer; color: var(--muted); font-size: 1.1rem; transition: color 0.2s, background 0.2s; }
+.modal-close:hover { color: var(--ink); background: var(--line); }
+.modal-box h2 { font-size: clamp(1.3rem, 3vw, 1.7rem); margin: 0 0 4px; }
+.modal-box .modal-eyebrow { font-size: 0.72rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.12em; color: var(--primary); margin: 0 0 2px; }
+.modal-box .modal-meta { display: flex; gap: 10px; flex-wrap: wrap; margin: 6px 0 20px; font-size: 0.78rem; color: var(--muted); }
+.modal-box .modal-meta span { display: inline-flex; align-items: center; gap: 4px; }
+.modal-visual { width: 100%; border-radius: var(--radius-md); overflow: hidden; margin: 0 0 24px; background: #101520; }
+.modal-visual img, .modal-visual video { width: 100%; display: block; }
+.modal-section { margin-bottom: 20px; }
+.modal-section:last-child { margin-bottom: 0; }
+.modal-section h3 { font-size: 0.85rem; margin: 0 0 6px; display: inline-flex; align-items: center; gap: 6px; color: var(--primary); }
+.modal-section h3::before { content: ''; display: inline-block; width: 3px; height: 14px; background: var(--primary); border-radius: 2px; }
+.modal-section p { margin: 0; font-size: 0.9rem; color: var(--muted); line-height: 1.6; }
+.modal-section ul { margin: 6px 0 0; padding: 0 0 0 18px; font-size: 0.9rem; color: var(--muted); line-height: 1.7; }
+.modal-tags { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 8px; }
+.modal-tags .cs-badge { font-size: 0.68rem; padding: 2px 10px; }
+body.dark-mode .modal-box { background: #141f3a; }
+body.dark-mode .modal-close { border-color: rgba(226,232,240,0.1); }
+body.dark-mode .modal-close:hover { background: rgba(226,232,240,0.08); }
+body.modal-open { overflow: hidden; }
+@media (max-width: 600px) {
+    .modal-box { padding: 24px 20px; }
+    .modal-visual { border-radius: var(--radius-sm); }
+    .modal-section p { font-size: 0.85rem; }
+}
+
 /* RESPONSIVE */
 @media (max-width: 900px) {
     .focus-grid { grid-template-columns: 1fr; }
     .focus-cards { grid-template-columns: 1fr; }
-    .wms-grid { grid-template-columns: repeat(2, 1fr); }
-    .wms-card:nth-child(2) { border-right: none; }
     .method-steps { grid-template-columns: repeat(2, 1fr); }
 }
 
@@ -439,12 +334,6 @@ img { max-width: 100%; height: auto; display: block; }
     .header-actions { gap: 8px; }
     .focus-grid { gap: 8px; }
     .focus-item { padding: 14px; }
-    .wms-grid { grid-template-columns: 1fr; }
-    .wms-card { border-right: none; border-bottom: 1px solid var(--line); }
-    .wms-card:last-child { border-bottom: none; }
-    .wms-gallery { flex-direction: column; gap: 4px; }
-    .wms-gallery-item { flex: none; }
-    .devos-tech { flex-direction: column; gap: 18px; }
     .btn-sm { padding: 10px 16px; }
 }
 
