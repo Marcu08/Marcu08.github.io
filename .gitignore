@@ -20,3 +20,8 @@ screenshot-ls-Soffass.png
 screenshot-gestione-ferie.png
 screenshot-tfl.png
 screenshot-ls.png
+
+# WMS source assets (converted to WebP in assets/wms/)
+wms-dashboard.webp
+wms-export.png
+wms-ocr.webp.png
