@@ -40,12 +40,16 @@ jobs:
       - name: Deploy to GitHub Pages (attempt 1)
         id: deploy_first
         uses: actions/deploy-pages@v5
+        with:
+          timeout: 1800000
         continue-on-error: true
 
       - name: Deploy to GitHub Pages (attempt 2)
         id: deploy_second
         if: steps.deploy_first.outcome == 'failure'
         uses: actions/deploy-pages@v5
+        with:
+          timeout: 1800000
 
       - name: Fail if both deploy attempts failed
         if: steps.deploy_first.outcome == 'failure' && steps.deploy_second.outcome == 'failure'
