@@ -410,7 +410,7 @@ img { max-width: 100%; height: auto; display: block; }
     .section { padding: 16px; }
     .site-header { gap: 6px; padding: 10px 12px; }
     .main-nav { gap: 12px; overflow-x: auto; }
-    .main-nav a { font-size: 0.78rem; white-space: nowrap; }
+    .main-nav a { font-size: 0.78rem; white-space: nowrap; padding: 8px 6px; }
     .logo { font-size: 0.78rem; padding: 6px 10px; }
     .hero { padding: 60px 16px 36px; min-height: auto; }
     .hero-title { font-size: 2.2rem; }
@@ -426,6 +426,7 @@ img { max-width: 100%; height: auto; display: block; }
     .wms-gallery { flex-direction: column; gap: 4px; }
     .wms-gallery-item { flex: none; }
     .devos-tech { flex-direction: column; gap: 18px; }
+    .btn-sm { padding: 10px 16px; }
 }
 
 @media (prefers-reduced-motion: reduce) {
