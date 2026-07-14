@@ -297,12 +297,12 @@
           <div class="method-step">
             <span class="method-num">04</span>
             <h3>Testing</h3>
-            <p>Checking functionality and improving reliability.</p>
+            <p>Unit tests, integration tests and manual QA on real devices. Edge case validation — OCR confidence thresholds, barcode scan accuracy, conflict detection in approval workflows. Regression checks before every release.</p>
           </div>
         <div class="method-step">
           <span class="method-num">05</span>
-          <h3>Deployment</h3>
-          <p>Releasing to production and maintaining stability.</p>
+          <h3>Deployment &amp; CI/CD</h3>
+          <p>GitHub Actions automates builds and deployment. Static sites deploy to GitHub Pages on push. Production apps use staged rollouts with validation checkpoints and automatic rollback on failure.</p>
         </div>
       </div>
     </section>
@@ -385,6 +385,25 @@
     </div>
 
     <div class="modal-section">
+      <h3>Testing &amp; QA</h3>
+      <ul>
+        <li><strong>OCR accuracy benchmarking</strong> — Ran 200+ real supplier documents through the pipeline to measure confidence score distributions. Manually verified every false positive/negative to tune extraction rules and confidence thresholds.</li>
+        <li><strong>Sync conflict simulation</strong> — Tested multi-user scenarios with simultaneous writes, offline queue accumulation, and reconnection storms. Triggered edge cases like two operators scanning the same barcode at the same time.</li>
+        <li><strong>Device matrix testing</strong> — Validated PWA behaviour across warehouse tablets, smartphones and desktop browsers. Tested service worker caching, install prompts and camera access on each device class.</li>
+        <li><strong>Regression protocol</strong> — Before each update, re-ran the full OCR benchmark suite and manually walked through the core flows (receive goods, pick inventory, generate DDT) to catch regressions early.</li>
+      </ul>
+    </div>
+
+    <div class="modal-section">
+      <h3>CI/CD</h3>
+      <ul>
+        <li><strong>GitHub Actions pipeline</strong> — Automated build and deployment to GitHub Pages. Every push to main triggers a fresh deploy with zero downtime.</li>
+        <li><strong>Staged rollouts</strong> — New versions deploy to a staging environment first. Production switch happens only after manual smoke tests pass on staging.</li>
+        <li><strong>Rollback strategy</strong> — Previous build artifacts are retained. If a production issue is detected, reverting takes one click via the GitHub Actions workflow dispatch.</li>
+      </ul>
+    </div>
+
+    <div class="modal-section">
       <h3>Lessons Learned</h3>
       <ul>
         <li>Building offline-first requires designing state management around sync conflicts from the start.</li>
@@ -459,6 +478,25 @@
     <div class="modal-section">
       <h3>Challenges</h3>
       <p>Handling diverse Windows environments was the main challenge. Different PowerShell versions, execution policies and user permissions could break scripts. I addressed this by including environment detection at startup and graceful fallbacks for incompatible configurations. The rollback system was also tricky to design — it needed to be reliable enough that operators trusted automation over manual work.</p>
+    </div>
+
+    <div class="modal-section">
+      <h3>Testing &amp; QA</h3>
+      <ul>
+        <li><strong>State machine unit tests</strong> — Each pipeline state (idle, running, step-complete, failed, rolling-back, recovered) was tested in isolation with mocked PowerShell processes. Verified correct transitions for success, failure and timeout scenarios.</li>
+        <li><strong>Rollback integrity testing</strong> — Deliberately injected failures at every step position (first, middle, last) and verified that rollback restored the system to the exact pre-pipeline state. Ran each failure position 10 times across different Windows versions.</li>
+        <li><strong>Cross-environment matrix</strong> — Tested on Windows 10 Home, Windows 10 Pro and Windows 11 with different PowerShell editions (5.1, 7.x) and execution policies (Restricted, RemoteSigned, Unrestricted). Logged compatibility issues as environment detection rules.</li>
+        <li><strong>Integration smoke tests</strong> — A full end-to-end run on a clean VM after every change. Validated that the agent can bootstrap itself, apply all patches and leave the environment fully functional.</li>
+      </ul>
+    </div>
+
+    <div class="modal-section">
+      <h3>CI/CD</h3>
+      <ul>
+        <li><strong>GitHub Actions</strong> — Automated release pipeline that runs the full test matrix on every push, publishes versioned artifacts and generates changelogs from commit history.</li>
+        <li><strong>Semantic versioning</strong> — Releases follow semver. Patch bumps for bug fixes, minor for new features, major for breaking changes. Each release tag triggers an automatic GitHub Release with pre-built binaries.</li>
+        <li><strong>Pre-release validation</strong> — Release candidates are published as GitHub Pre-releases first. A manual smoke-test on a real machine must pass before promoting to stable.</li>
+      </ul>
     </div>
 
     <div class="modal-section">
